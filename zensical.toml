@@ -1,8 +1,9 @@
 [project]
+#validation = false
 site_url = "https://www.example.com/"
-site_name = "Documentation 2.0"
-site_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-site_author = "Artur H."
+site_name = "Mein Projekt"
+site_description = "Willkommen"
+site_author = "Artur"
 extra_css = ["stylesheets/extra.css"]
 copyright = """
   Copyright &copy; 2026 Artur LLC –
@@ -11,13 +12,42 @@ copyright = """
 
 repo_url = "https://github.com/user/repo"
 repo_name = "Test/test"
-# repo = "fontawesome/brands/git-alt"
 edit_uri = "edit/main/docs/"
 
-nav = [{ "SEITE NICHT GEFUNDEN" = "index.md" }, { "" = "markdown.md" }]
+nav = [
+  { "Willkommen" = "index.md" },
+  { "MEINE ERSTE SEITE" = "seite1.md" },
+  { "TEST" = "markdown.md" },
+  { "Home" = "index.md" },
+  { "About" = [
+    "about/index.md",
+    "about/vision.md",
+    "about/team.md",
+  ] },
+  { "GitHub Repo" = "https://httpbin.org" },
+
+  { "Blog" = [
+    "blog/index.md",
+  ] },
+
+  { "Staff Things" = [
+    "staff/staff_recap.md",
+    "staff/staff_rules.md",
+    "staff/staff_system.md",
+    "staff/staff_utility.md",
+  ] },
+
+  { "Best Practices & Richtlinien" = [
+    "handbuch/richtlinien.md", # Erste Unterseite
+    "handbuch/code-stil.md",   # Code- & Schreibstil
+    "handbuch/sicherheit.md",  # Sicherheit & Qualität
+  ] },
+
+]
 
 # extra_css = ["stylesheets/extra.css"]
 # extra_javascript = ["javascripts/extra.js"]
+# not_in_nav 
 
 [project.theme]
 #variant = "modern" # oder "classic"
@@ -35,25 +65,26 @@ features = [
   "content.footnote.tooltips",
   "content.tabs.link",
   "content.tooltips",
-  # "header.autohide",
-  # "navigation.expand",
+  # "header.autohide", # Versteckt oben automatisch
+  "navigation.expand",
   "navigation.footer",
-  "navigation.indexes",
+  # "navigation.indexes", NICHT KOMPATIBEL MIT toc.integrate
   "navigation.instant",
   "navigation.instant.prefetch",
-  # "navigation.instant.progress",
+  "navigation.instant.progress",
   "navigation.path",
-  # "navigation.prune",
-  "navigation.sections",
-  # "navigation.tabs",
-  # "navigation.tabs.sticky",
+  # "navigation.prune", # NICHT KOMPATIBEL MIT navigation.expand
+  #"navigation.sections",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
-  # "toc.follow",
-  # "toc.integrate",
+  "toc.follow",
+  "toc.integrate",
 
 ]
+
 
 [project.theme.icon]
 logo = "lucide/smile"
@@ -130,6 +161,11 @@ alternate = [
   { name = "Italian", link = "/it/", lang = "it" },
 ]
 
+[project.plugins.search]
+enabled = true
+
+[project.plugins.blog]
+
 [project.extra.consent]
 title = "Cookie consent"
 description = """
@@ -139,6 +175,16 @@ description = """
   make our documentation better.
 """
 actions = ["accept", "reject", "manage"]
+
+#[project.validation]
+#invalid_links = false
+#invalid_link_anchors = false
+#unresolved_references = false
+#unresolved_footnotes = false
+#unused_definitions = false
+#unused_footnotes = false
+#shadowed_definitions = false
+#shadowed_footnotes = false
 
 [project.markdown_extensions]
 abbr = {}
