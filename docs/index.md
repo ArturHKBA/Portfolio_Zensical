@@ -8,9 +8,9 @@ For full documentation visit [zensical.org](https://zensical.org/docs/).
 
 ## Commands
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+- [`zensical new`][new] - Create a new project
+- [`zensical serve`][serve] - Start local web server
+- [`zensical build`][build] - Build your site
 
   [new]: https://zensical.org/docs/usage/new/
   [serve]: https://zensical.org/docs/usage/preview/
@@ -43,7 +43,7 @@ For full documentation visit [zensical.org](https://zensical.org/docs/).
 
 > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
 
-``` python hl_lines="2" title="Code blocks"
+```python hl_lines="2" title="Code blocks"
 def greet(name):
     print(f"Hello, {name}!") # (1)!
 
@@ -76,7 +76,7 @@ Code can also be highlighted inline: `#!python print("Hello, Python!")`.
 
 > Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
 
-``` mermaid
+```mermaid
 graph LR
   A[Start] --> B{Error?};
   B -->|Yes| C[Hmm...];
@@ -95,7 +95,6 @@ Hover it, to see a tooltip.
 
 [^1]: This is the footnote.
 
-
 ## Formatting
 
 > Go to [documentation](https://zensical.org/docs/authoring/formatting/)
@@ -111,11 +110,11 @@ Hover it, to see a tooltip.
 
 > Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
 
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
+- :sparkles: `:sparkles:`
+- :rocket: `:rocket:`
+- :tada: `:tada:`
+- :memo: `:memo:`
+- :eyes: `:eyes:`
 
 ## Maths
 
@@ -126,11 +125,11 @@ $$
 $$
 
 !!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
+Note that MathJax is included via a `script` tag on this page and is not
+configured in the generated default configuration to avoid including it
+in a pages that do not need it. See the documentation for details on how
+to configure it on all your pages if they are more Maths-heavy than these
+simple starter pages.
 
 <script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
@@ -159,10 +158,10 @@ $$
 
 > Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
 
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
+- [x] Install Zensical
+- [x] Configure `zensical.toml`
+- [x] Write amazing documentation
+- [ ] Deploy anywhere
 
 ## Tooltips
 
@@ -170,4 +169,70 @@ $$
 
 [Hover me][example]
 
-  [example]: https://example.com "I'm a tooltip!"
+[example]: https://example.com "I'm a tooltip!"
+
+# **MY PROJECTS**
+
+### **1. 2016 – 2019 | Unity Engine**
+
+**Foundational projects and initial experiments in game development.**
+
+##### Simple AI & Pathfinding:
+
+##### Procedural VFX (Particle Systems):
+
+##### First-Person Animation:
+
+##### Immersive Gameplay Mechanics (Player States):
+
+##### Technical Optimization (Graphics Menu):
+
+##### Cross-Platform Input Support:
+
+**Note:**
+
+### **2. 2019 – 2021 | Modding Frameworks**
+
+**Development of custom systems and multiplayer frameworks**
+
+My key Contributions:
+
+##### Realistic Inventory & Weapon Restriction:
+
+##### Emergency lighting system Overhaul:
+
+##### Dynamic fire/flame System:
+
+##### Mask Shop System:
+
+##### Immersive Armory & Animation Syncing:
+
+##### Other projects & world building:
+
+##### Custom Mapping & Level Design:
+
+**Note:**
+
+### **3. 2022 – 2024 | Unity Engine**
+
+**Advanced school assignments and specialized technical explorations.**
+
+Overview:
+
+##### Demos
+
+##### Extra Additions:
+
+##### Inverse Kinematics:
+
+##### 4. 2025 – Present | Current Works
+
+**Ongoing focus on complex mechanics and immersive environments.**
+
+Overview:
+
+##### Weapon System Development in Unity:
+
+##### VR Optimization & VRChat World Building:
+
+**Note:**

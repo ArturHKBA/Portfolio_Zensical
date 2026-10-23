@@ -1,32 +1,34 @@
 [project]
 site_url = "https://www.example.com/"
 site_name = "Documentation 2.0"
-# site_description = "Your project description"
-# site_author = "Your name"
+site_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+site_author = "Artur H."
+extra_css = ["stylesheets/extra.css"]
+copyright = """
+  Copyright &copy; 2026 Artur LLC –
+  <a href="#__consent">Change cookie settings</a>
+"""
 
-# copyright = "Copyright &copy; 2026 Your name"
+repo_url = "https://github.com/user/repo"
+repo_name = "Test/test"
+# repo = "fontawesome/brands/git-alt"
+edit_uri = "edit/main/docs/"
 
-# repo_url = "https://github.com/user/repo"
-# repo_name = "user/repo"
-# edit_uri = "edit/main/docs/"
-
-nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
-]
+nav = [{ "Get started" = "index.md" }, { "Markdown in 5min" = "markdown.md" }]
 
 # extra_css = ["stylesheets/extra.css"]
 # extra_javascript = ["javascripts/extra.js"]
 
 [project.theme]
-# variant = "classic"
-# custom_dir = "overrides"
-# favicon = "images/favicon.png"
-language = "en"
+#variant = "modern" # oder "classic"
+custom_dir = "overrides"
+favicon = "Profile_logo.png"
+logo = "Profile_logo.png"
+language = "de"
 features = [
   "announce.dismiss",
-  # "content.action.edit",
-  # "content.action.view",
+  "content.action.edit",
+  "content.action.view",
   "content.code.annotate",
   "content.code.copy",
   "content.code.select",
@@ -50,41 +52,93 @@ features = [
   "search.highlight",
   # "toc.follow",
   # "toc.integrate",
+
 ]
 
-# logo = "assets/logo.png"
+[project.theme.icon]
+logo = "lucide/smile"
+repo = "fontawesome/brands/github"
 
-# [project.theme.icon]
-# logo = "lucide/smile"
-
-# [project.theme.font]
-# text = "Inter"
-# code = "Jetbrains Mono"
+[project.theme.font]
+text = "Inter"
+code = "Jetbrains Mono"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
+primary = "red"
+accent = "red"
 toggle.icon = "lucide/sun-moon"
 toggle.name = "Switch to light mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
+primary = "red"
+accent = "red"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
+primary = "red"
+accent = "red"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/github"
-# link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = ""
+name = "TEST"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/mastodon"
-# link = "https://fosstodon.org/@user"
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = ""
+name = "TEST"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/facebook"
+link = ""
+name = "TEST"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/instagram"
+link = ""
+name = "TEST"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = ""
+name = "TEST"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = ""
+name = "TEST"
+
+[project.extra]
+generator = false
+alternate = [
+  { name = "WORK IN PROGRESS", link = "", lang = "" },
+  { name = "English", link = "/en/", lang = "en" },
+  { name = "Deutsch", link = "/de/", lang = "de" },
+  { name = "Armenian", link = "/hy/", lang = "hy" },
+  { name = "Japanese", link = "/ja/", lang = "ja" },
+  { name = "French", link = "/fr/", lang = "fr" },
+  { name = "Russian", link = "/ru/", lang = "ru" },
+  { name = "Spanish", link = "/es/", lang = "es" },
+  { name = "Italian", link = "/it/", lang = "it" },
+]
+
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+  We use cookies to recognize your repeated visits and preferences, as well
+  as to measure the effectiveness of our documentation and whether users
+  find what they're searching for. With your consent, you're helping us to
+  make our documentation better.
+"""
+actions = ["accept", "reject", "manage"]
 
 [project.markdown_extensions]
 abbr = {}

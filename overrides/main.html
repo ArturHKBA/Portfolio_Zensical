@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <div class="custom-announcement">
+    <!-- Das orangefarbene Datums-Badge -->
+    <span class="announcement-badge">
+      <span class="badge-dot"></span> Work In Progress...
+    </span>
+    
+    <!-- Der eigentliche Text mit Link -->
+    <span class="announcement-text">
+      Es werden bugs auftreten und einige Seiten sind nicht erreichbar – 
+      <a href="" class="announcement-link">Klicke auf mich &rarr;</a>
+    </span>
+  </div>
+
+  <!-- Styling direkt einbetten, damit es exakt wie auf dem Bild aussieht -->
+  <style>
+    .custom-announcement {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: inherit;
+      font-size: 14px;
+      padding: 4px 0;
+    }
+
+    .announcement-badge {
+      background-color: rgba(234, 112, 50, 0.15); /* Dezentes Orange transparent */
+      color: #ea7032; /* Kräftiges Orange für den Text */
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(234, 112, 50, 0.3);
+    }
+
+    /* Der kleine leuchtende Punkt im Badge 
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #ea7032;
+      border-radius: 50%;
+      display: inline-block;
+    } */
+
+    .announcement-text {
+      color: #e2e8f0; /* Helles Grauweiß für den Text */
+    }
+
+    .announcement-link {
+      color: #ffffff !important;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .announcement-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+{% endblock %}
