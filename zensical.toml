@@ -16,32 +16,28 @@ edit_uri = "edit/main/docs/"
 
 nav = [
   { "Willkommen" = "index.md" },
-  { "MEINE ERSTE SEITE" = "seite1.md" },
+  #{ "MEINE ERSTE SEITE" = "seite1.md" },
   { "TEST" = "markdown.md" },
   { "Home" = "index.md" },
-  { "About" = [
-    "about/index.md",
-    "about/vision.md",
-    "about/team.md",
-  ] },
-  { "GitHub Repo" = "https://httpbin.org" },
+  { "About" = ["about/index.md", "about/vision.md", "about/team.md"] },
+  #{ "GitHub Repo" = "https://httpbin.org" },
 
-  { "Blog" = [
-    "blog/index.md",
-  ] },
+  { "Staff-Things" = ["blog/index.md"] },
 
-  { "Staff Things" = [
-    "staff/staff_recap.md",
-    "staff/staff_rules.md",
-    "staff/staff_system.md",
-    "staff/staff_utility.md",
-  ] },
+  #{ "Staff Things" = [
 
-  { "Best Practices & Richtlinien" = [
-    "handbuch/richtlinien.md", # Erste Unterseite
-    "handbuch/code-stil.md",   # Code- & Schreibstil
-    "handbuch/sicherheit.md",  # Sicherheit & Qualität
-  ] },
+  # "staff/staff_recap.md",
+  # "staff/staff_rules.md",
+  #"docs/blog/posts/2024-06-24-staff-recap.md",
+  #  "staff/staff_system.md",
+  #  "staff/staff_utility.md",
+  #] },
+
+  #{ "Best Practices & Richtlinien" = [
+  # "handbuch/richtlinien.md", # Erste Unterseite
+  #"handbuch/code-stil.md",   # Code- & Schreibstil
+  # "handbuch/sicherheit.md",  # Sicherheit & Qualität
+  #] },
 
 ]
 
@@ -54,7 +50,7 @@ nav = [
 custom_dir = "overrides"
 favicon = "Profile_logo.png"
 logo = "Profile_logo.png"
-language = "de"
+language = "en"
 features = [
   "announce.dismiss",
   "content.action.edit",
@@ -166,6 +162,15 @@ enabled = true
 
 [project.plugins.blog]
 
+[project.plugins.tags]
+
+[project.extra.tags]
+Compatibility = "TEST"
+
+[project.theme.icon.tag]
+default = "custom/alien"
+Compatibility = "custom/alien"
+
 [project.extra.consent]
 title = "Cookie consent"
 description = """
@@ -200,6 +205,7 @@ pymdownx.caret = {}
 pymdownx.details = {}
 pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
 pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.options.custom_icons = ["overrides/.icons"]
 pymdownx.highlight.anchor_linenums = true
 pymdownx.highlight.line_spans = "__span"
 pymdownx.highlight.pygments_lang_class = true
