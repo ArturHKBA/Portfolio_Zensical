@@ -14,24 +14,47 @@ repo_url = "https://github.com/user/repo"
 repo_name = "Test/test"
 edit_uri = "edit/main/docs/"
 
+#nav = [
+#  { "Introduction" = "index.md" },
+#  { "About Me" = "about_me.md" },
+#{ "Major Projects" = "major_projects.md" },
+# { "Skills & Tools" = "skills_and_tools.md" },
+#{ "Experience" = "experience.md" },
+#{ "Education" = "education.md" },
+#{ "Contact Me" = "contact.md" },
+#{ "Feedback" = "feedback.md" },
+#] 
+
 nav = [
-  { "Willkommen" = "index.md" },
+
+  { "Home" = [
+    { "Introduction" = "index.md" },
+    { "About Me" = "about_me.md" },
+    { "Major Projects" = "major_projects.md" },
+    { "Skills and Tools" = "skills_and_tools.md" },
+    { "Contact Me" = "contact.md" },
+    { "My Partners" = "partners.md" },
+    { "Your Feedback" = "feedback.md" },
+  ] },
+  { "Utility" = [
+    "utility/utility_tuto.md",
+    "utility/utility_markdown.md",
+  ] },
   #{ "MEINE ERSTE SEITE" = "seite1.md" },
-  { "TEST" = "markdown.md" },
-  { "Home" = "index.md" },
-  { "About" = ["about/index.md", "about/vision.md", "about/team.md"] },
+  #{ "TEST" = "markdown.md" },
+  #{ "Home" = "index.md" },
+  #{ "About" = ["about/index.md", "about/vision.md", "about/team.md"] },
   #{ "GitHub Repo" = "https://httpbin.org" },
 
-  { "Staff-Things" = ["blog/index.md"] },
+  #{ "Staff-Things" = ["blog/index.md"] },
 
-  #{ "Staff Things" = [
+  { "Staff Things" = [
 
-  # "staff/staff_recap.md",
-  # "staff/staff_rules.md",
-  #"docs/blog/posts/2024-06-24-staff-recap.md",
-  #  "staff/staff_system.md",
-  #  "staff/staff_utility.md",
-  #] },
+    "staff/staff_rules.md",
+    "staff/staff_system.md",
+    "staff/staff_utility.md",
+    #"docs/blog/posts/2024-06-24-staff-recap.md",
+  ] },
 
   #{ "Best Practices & Richtlinien" = [
   # "handbuch/richtlinien.md", # Erste Unterseite
@@ -64,7 +87,7 @@ features = [
   # "header.autohide", # Versteckt oben automatisch
   "navigation.expand",
   "navigation.footer",
-  # "navigation.indexes", NICHT KOMPATIBEL MIT toc.integrate
+  # "navigation.indexes",          #NICHT KOMPATIBEL MIT toc.integrate
   "navigation.instant",
   "navigation.instant.prefetch",
   "navigation.instant.progress",
