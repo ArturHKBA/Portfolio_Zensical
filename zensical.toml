@@ -56,6 +56,15 @@ nav = [
     #"docs/blog/posts/2024-06-24-staff-recap.md",
   ] },
 
+  { "Major Projects" = [
+
+    { "2016 – 2019 | Unity Engine" = "projects/my_project_1.md" },
+    { "2019 – 2021 | Modding Frameworks" = "projects/my_project_2.md" },
+    { "2022 – 2024 | Unity Engine" = "projects/my_project_3.md" },
+    { "2025 – Present | Current Works" = "projects/my_project_4.md" },
+
+  ] },
+
   #{ "Best Practices & Richtlinien" = [
   # "handbuch/richtlinien.md", # Erste Unterseite
   #"handbuch/code-stil.md",   # Code- & Schreibstil
@@ -91,10 +100,10 @@ features = [
   "navigation.instant",
   "navigation.instant.prefetch",
   "navigation.instant.progress",
-  "navigation.path",
   # "navigation.prune", # NICHT KOMPATIBEL MIT navigation.expand
   #"navigation.sections",
   "navigation.tabs",
+  "navigation.path",
   "navigation.tabs.sticky",
   "navigation.top",
   "navigation.tracking",

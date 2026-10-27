@@ -667,3 +667,335 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   GLOBAL & HEADER STYLING
+   ========================================================================== */
+
+/* Globale Absicherung für Abstände und responsive Berechnung */
+.project-subtitle, 
+.project-intro, 
+.tech-stack-container, 
+.overview-section,
+.navigation-container {
+  box-sizing: border-box;
+}
+
+/* Kleinerer Titel/Zeitraum ganz oben */
+.project-subtitle {
+  font-size: 1.1rem;
+  color: #8e8e93;
+  margin-bottom: 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Einleitende Kurzbeschreibung */
+.project-intro {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   TECH STACK BADGES (NIKE REDESIGN STYLE)
+   ========================================================================== */
+
+/* Container für die Tech-Stack-Sektion */
+.tech-stack-container {
+  margin-bottom: 2rem;
+}
+
+/* Kleiner, moderner Tech-Stack-Titel in Großbuchstaben */
+.tech-stack-title {
+  font-size: 0.95rem;
+  color: #8e8e93;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Flexbox für die saubere Anordnung der Boxen nebeneinander */
+.tech-stack-flex {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Filigrane, eckige Boxen für die einzelnen Technologien */
+.tech-badge {
+  background-color: #111112;
+  border: 1px solid #222224;
+  color: #e4e4e7;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Subtiler Hover-Effekt für die Tech-Badges */
+.tech-badge:hover {
+  border-color: #3f3f46;
+  background-color: #18181b;
+}
+
+/* Bild-Icons (.svg / .png) aus deinem Ordner sauber skalieren */
+.tech-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  flex-shrink: 0;
+  object-fit: contain; /* Verhindert das Verzerren der Grafiken */
+}
+
+/* ==========================================================================
+   OVERVIEW & SEPARATOR
+   ========================================================================== */
+
+/* Dezente, dunkle Trennlinie nach dem Tech-Stack */
+.project-divider {
+  border: 0;
+  border-top: 1px solid #1c1c1e;
+  margin: 2rem 0;
+}
+
+/* Überschrift der Overview-Sektion */
+.overview-section h3 {
+  font-size: 1.1rem;
+  color: #8e8e93;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Fließtext der Projektübersicht */
+.overview-section p {
+  color: #e1e1e6;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   INTERACTIVE BUTTON
+   ========================================================================== */
+
+/* Positionierungs-Container */
+.navigation-container {
+  margin-top: 3rem;
+  display: flex;
+}
+
+/* Der voll interaktive, lila Haupt-Button */
+.btn-primary-nav {
+  background-color: #6b21a8;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Flüssiger Übergang für Hover- und Klickeffekte */
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover-Zustand (Maus bewegt sich auf den Button) */
+.btn-primary-nav:hover {
+  background-color: #7c3aed; /* Wechselt zu einem helleren Violett */
+  transform: translateY(-2px); /* Hebt den Button minimal an */
+  box-shadow: 0 6px 12px rgba(124, 58, 237, 0.25); /* Erzeugt einen mitleuchtenden Schatten */
+}
+
+/* Active-Zustand (Beim Herunterdrücken mit der Maus) */
+.btn-primary-nav:active {
+  transform: translateY(0); /* Drückt den Button optisch wieder nach unten */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   MAJOR PROJECTS DYNAMISCH STEUERN (REPARIERT FÜR ORDNER 'projects')
+   ========================================================================== */
+
+/* 1. Im Normalzustand (z. B. auf der Startseite) Major Projects überall ausblenden */
+.md-tabs__list .md-tabs__item:has(a[href*="projects"]),
+.md-nav--primary > .md-nav__list > .md-nav__item:has(a[href*="projects"]) {
+  display: none !important;
+}
+
+/* 2. Sobald eine Seite AUS DEM ORDNER 'projects' aktiv geöffnet wird,
+   blenden wir den oberen Tab UND die linke Menüliste sofort ein */
+.md-tabs__list .md-tabs__item--active:has(a[href*="projects"]),
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="projects"]),
+.md-nav__item--active .md-nav__list .md-nav__item {
+  display: inline-block !important;
+}
+
+/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="projects"]) {
+  display: block !important;
+}
+
+/* ==========================================================================
+   STAFF THINGS NAVI-REITER INTUITIV STEUERN
+   ========================================================================== */
+
+/* 1. Im Normalzustand (z. B. auf der Startseite) Staff Things überall ausblenden */
+.md-tabs__list .md-tabs__item:has(a[href*="staff"]),
+.md-nav--primary > .md-nav__list > .md-nav__item:has(a[href*="staff"]) {
+  display: none !important;
+}
+
+/* 2. Sobald eine Seite AUS DEM STAFF-SYSTEM aktiv geöffnet ist,
+   blenden wir den oberen Tab UND die linke Seitenleiste sofort wieder ein */
+.md-tabs__list .md-tabs__item--active:has(a[href*="staff"]),
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="staff"]),
+.md-nav__item--active .md-nav__list .md-nav__item {
+  display: inline-block !important;
+}
+
+/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="staff"]) {
+  display: block !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

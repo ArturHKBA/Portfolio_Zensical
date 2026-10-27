@@ -127,3 +127,87 @@
   background-color: rgba(255, 255, 255, 0.03);
   color: #ffffff;
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   MAJOR PROJECTS DYNAMISCH STEUERN (REPARIERT FÜR ORDNER 'projects')
+   ========================================================================== */
+
+/* 1. Im Normalzustand (z. B. auf der Startseite) Major Projects überall ausblenden */
+.md-tabs__list .md-tabs__item:has(a[href*="projects"]),
+.md-nav--primary > .md-nav__list > .md-nav__item:has(a[href*="projects"]) {
+  display: none !important;
+}
+
+/* 2. Sobald eine Seite AUS DEM ORDNER 'projects' aktiv geöffnet wird,
+   blenden wir den oberen Tab UND die linke Menüliste sofort ein */
+.md-tabs__list .md-tabs__item--active:has(a[href*="projects"]),
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="projects"]),
+.md-nav__item--active .md-nav__list .md-nav__item {
+  display: inline-block !important;
+}
+
+/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="projects"]) {
+  display: block !important;
+}
+
+/* ==========================================================================
+   STAFF THINGS NAVI-REITER INTUITIV STEUERN
+   ========================================================================== */
+
+/* 1. Im Normalzustand (z. B. auf der Startseite) Staff Things überall ausblenden */
+.md-tabs__list .md-tabs__item:has(a[href*="staff"]),
+.md-nav--primary > .md-nav__list > .md-nav__item:has(a[href*="staff"]) {
+  display: none !important;
+}
+
+/* 2. Sobald eine Seite AUS DEM STAFF-SYSTEM aktiv geöffnet ist,
+   blenden wir den oberen Tab UND die linke Seitenleiste sofort wieder ein */
+.md-tabs__list .md-tabs__item--active:has(a[href*="staff"]),
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="staff"]),
+.md-nav__item--active .md-nav__list .md-nav__item {
+  display: inline-block !important;
+}
+
+/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="staff"]) {
+  display: block !important;
+}
+
+
+
+
+
+/* ==========================================================================
+   STAFF THINGS NAVI-REITER INTUITIV STEUERN
+   ========================================================================== */
+
+/* 1. Im Normalzustand (z. B. auf der Startseite) Staff Things überall ausblenden */
+.md-tabs__list .md-tabs__item:has(a[href*="my_project_1.md"]),
+.md-nav--primary > .md-nav__list > .md-nav__item:has(a[href*="my_project_1.md"]) {
+  display: none !important;
+}
+
+/* 2. Sobald eine Seite AUS DEM STAFF-SYSTEM aktiv geöffnet ist,
+   blenden wir den oberen Tab UND die linke Seitenleiste sofort wieder ein */
+.md-tabs__list .md-tabs__item--active:has(a[href*="my_project_1.md"]),
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="my_project_1.md"]),
+.md-nav__item--active .md-nav__list .md-nav__item {
+  display: inline-block !important;
+}
+
+/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
+.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="my_project_1.md"]) {
+  display: block !important;
+} 
