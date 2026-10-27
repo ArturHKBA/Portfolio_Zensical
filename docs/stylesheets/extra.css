@@ -520,3 +520,150 @@
 
 
 
+
+
+
+
+
+
+
+/* Haupt-Sektion */
+.contact-section {
+  background-color: #0d0d0d; /* Tiefschwarzer Hintergrund */
+  color: #ffffff;
+  padding: 2.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Kleiner Titel ganz oben */
+.contact-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+/* Große, graue Headline */
+.contact-subtitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #8e8e93;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.03em;
+}
+
+/* Formular-Containerbeschränkung */
+.contact-form {
+  max-width: 100%; /* Passt sich der vollen Breite des Grid-Layouts an */
+}
+
+/* Einzelne Formular-Abschnitte */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Beschriftungen (Labels) */
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+/* Roter Pflichtfeld-Stern */
+.required {
+  color: #e53e3e;
+  margin-left: 0.2rem;
+}
+
+/* Eingabefelder & Textarea im edlen Dark-Glass-Stil */
+.form-group input,
+.form-group textarea {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Platzhalter-Text */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #4a5568; /* Dunkles Grau für die Placeholdertreue */
+}
+
+/* Fokus-Zustand beim Reinklicken */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Erlaubt nur vertikales Vergrößern der Textarea */
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Kleiner Hinweistext unter der E-Mail */
+.form-hint {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 0.5rem;
+}
+
+/* Der leuchtend violette Submit-Button */
+.btn-submit {
+  background-color: #e53e3e; /* Sattes Violett aus dem Screenshot */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #f90000; /* Leicht helleres Violett beim Hovern */
+}
+
+/* Der dezente Reset-Button */
+.btn-reset {
+  background-color: transparent;
+  color: #a0aec0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-reset:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+} 
+
+
+
+
+
+
+
+
+
+
+
