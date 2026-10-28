@@ -1,111 +1,23 @@
 ---
-icon: simple/markdown
+icon: img/unity
 ---
 
-# Markdown in 5min
+# **MY PROJECTS**
 
-## Headers
+**1. 2016 – 2019 | Unity Engine**
 
-```
-# H1 Header
-## H2 Header
-### H3 Header
-#### H4 Header
-##### H5 Header
-###### H6 Header
-```
+**Foundational projects and initial experiments in game development.**
 
-## Text formatting
+## Simple AI & Pathfinding:
 
-```
-**bold text**
-*italic text*
-***bold and italic***
-~~strikethrough~~
-`inline code`
-```
+## Procedural VFX (Particle Systems):
 
-## Links and images
+## First-Person Animation:
 
-```
-[Link text](https://example.com)
-[Link with title](https://example.com "Hover title")
-![Alt text](image.jpg)
-![Image with title](image.jpg "Image title")
-```
+## Immersive Gameplay Mechanics (Player States):
 
-## Lists
+## Technical Optimization (Graphics Menu):
 
-```
-Unordered:
+## Cross-Platform Input Support:
 
-- Item 1
-- Item 2
-  - Nested item
-
-Ordered:
-
-1. First item
-2. Second item
-3. Third item
-```
-
-## Blockquotes
-
-```
-> This is a blockquote
-> Multiple lines
->> Nested quote
-```
-
-## Code blocks
-
-````
-```javascript
-function hello() {
-  console.log("Hello, world!");
-}
-```
-````
-
-## Tables
-
-```
-| Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
-| Row 1    | Data     | Data     |
-| Row 2    | Data     | Data     |
-```
-
-## Horizontal rule
-
-```
----
-or
-***
-or
-___
-```
-
-## Task lists
-
-```
-- [x] Completed task
-- [ ] Incomplete task
-- [ ] Another task
-```
-
-## Escaping characters
-
-```
-Use backslash to escape: \* \_ \# \`
-```
-
-## Line breaks
-
-```
-End a line with two spaces
-to create a line break.
-
-Or use a blank line for a new paragraph.
-```
+**Note:**

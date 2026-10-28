@@ -121,205 +121,219 @@
 
 
 
-/* Haupt-Sektion */
-.skills-section {
-  background-color: #0d0d0d; /* Dunkler Hintergrund passend zum Screenshot */
-  color: #ffffff;
-  padding: 2.5rem 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
 
-/* Kleinerer Titel ganz oben */
-.skills-section h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  color: #ffffff;
-}
 
-/* Große, graue Headline */
-.skills-subtitle {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #8e8e93; /* Mattes Grau */
-  margin: 0 0 1.5rem 0;
-  letter-spacing: -0.03em;
-}
 
-/* Fließtext Beschreibung */
-.skills-description {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #a0aec0;
-  max-width: 900px;
-  margin: 0 0 2rem 0;
-}
 
-/* Flexbox-Container für automatischen Zeilenumbruch der Badges */
-.badges-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.4rem; /* Abstände minimal verringert */
-}
 
-/* Die noch kleineren und dezent abgerundeten Badge-Boxen */
-.skill-badge {
-  background-color: #ffffff;
-  color: #000000;
-  
-  /* Textgröße für einen noch kompakteren Look verringert */
-  font-size: 0.7rem;
-  font-weight: 500;
-  
-  /* Innenabstand verringert, damit die Boxen insgesamt kleiner werden */
-  padding: 0.2rem 0.5rem;
-  
-  /* NEU: Weniger rund (von 50px auf 5px reduziert) für einen modernen Badge-Stil */
-  border-radius: 5px; 
-  
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem; /* Abstand zwischen Icon und Text leicht verringert */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  cursor: default;
-  transition: transform 0.15s ease;
-}
 
-/* Automatisches Stylen des Icons – proportional zur neuen Badge-Größe geschrumpft */
-.skill-badge svg, 
-.skill-badge img {
-  width: 11px !important;
-  height: 11px !important;
-  display: inline-block;
-  vertical-align: middle;
-}
 
-/* Kleiner Hover-Effekt für die Badges */
-.skill-badge:hover {
-  transform: translateY(-1px);
-}
 
-/* Haupt-Sektion */
-.experience-section {
-  background-color: #0d0d0d;
-  color: #ffffff;
-  padding: 2.5rem 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
+/* ==========================================================================
+   1. HAUPT-SEKTION: TEXTE & GLOBALE STYLES
+   ========================================================================== */
 
-/* Kleinerer Titel ganz oben */
-.experience-section h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  color: #ffffff;
-}
-
-/* Große, graue Headline */
-.experience-subtitle {
+h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #8e8e93;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.03em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Einleitungstext */
-.experience-description {
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.5rem 0;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+h1 + p {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #a0aec0;
-  max-width: 1000px;
-  margin: 0 0 3rem 0;
-}
-
-/* Container für die Liste */
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: relative;
-}
-
-/* Einzelner Listen-Eintrag */
-.timeline-item {
-  display: flex;
-  gap: 1.25rem;
-  position: relative;
-}
-
-/* Das kleine rote quadratische Icon links */
-.timeline-icon {
-  width: 32px;
-  height: 32px;
-  background-color: rgba(138, 26, 36, 0.15); /* Transparentes Rot im Hintergrund */
-  border: 1px solid rgba(138, 26, 36, 0.4);  /* Roter Rand */
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-/* Sorgt dafür, dass das Zensical-Icon im Kasten rot gefärbt wird */
-.timeline-icon svg,
-.timeline-icon img {
-  width: 16px !important;
-  height: 16px !important;
-  fill: #8a1a24 !important;
-  color: #8a1a24 !important;
-}
-
-/* Rechter Content-Bereich */
-.timeline-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Kopfzeile für Titel + Badge */
-.timeline-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-/* Position / Firmenname */
-.timeline-content h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-}
-
-/* Die rote "Latest" Badge */
-.badge-latest {
-  background-color: #8a1a24; /* Dein Rot statt dem originalen Blau */
-  color: #ffffff;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Zeitraum-Angabe */
-.timeline-date {
-  font-size: 0.85rem;
-  color: #4a5568; /* Dunkles Grau für das Datum */
-  margin: 0.35rem 0 0.75rem 0;
-}
-
-/* Beschreibungstext der Tätigkeit */
-.timeline-text {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: #a0aec0;
-  margin: 0;
   max-width: 900px;
+  margin: 0 0 2.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
+
+
+/* ==========================================================================
+   2. LAYOUT: FLEXIBLE ZEILEN (Für Desktop-Ansicht)
+   ========================================================================== */
+
+.skills-grid-2x2 {
+  display: flex;
+  flex-wrap: wrap;       
+  gap: 0.5rem;           
+  align-items: flex-start; 
+  width: 100%;
+}
+
+/* Jede Box nimmt exakt die Hälfte der Zeile minus den halben Gap ein */
+.skills-grid-2x2 .custom-accordion {
+  width: calc(50% - 0.25rem); 
+  box-sizing: border-box;
+  margin: 0;             
+}
+
+/* NEU: Sortierung für die Desktop-Ansicht (2x2) */
+.skills-grid-2x2 .custom-accordion:nth-of-type(1) { order: 1; } /* Game Engines (Oben Links) */
+.skills-grid-2x2 .custom-accordion:nth-of-type(4) { order: 2; } /* Miscellaneous & Tools (Oben Rechts) */
+.skills-grid-2x2 .custom-accordion:nth-of-type(2) { order: 3; } /* 3D Modeling & Art (Unten Links) */
+.skills-grid-2x2 .custom-accordion:nth-of-type(3) { order: 4; } /* Programming Languages (Unten Rechts) */
+
+
+/* Mobile Ansicht für Smartphones */
+@media (max-width: 768px) {
+  .skills-grid-2x2 .custom-accordion {
+    width: 100%;         
+  }
+  
+  /* Setzt die Reihenfolge auf Smartphones zurück auf die normale HTML-Struktur */
+  .skills-grid-2x2 .custom-accordion {
+    order: unset !important;
+  }
+}
+
+
+
+
+
+/* ==========================================================================
+   3. KOMPONENTE: FORMATIERERSICHERE DETAILS-BOXEN (Ersatz für Zensical-Notes)
+   ========================================================================== */
+
+.custom-accordion {
+  background-color: #0d1117;             /* Dunkler Hintergrund aus dem Screenshot */
+  border: 1px solid #21262d;             /* Dezente Umrandung */
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 0;
+}
+
+/* Der klickbare Header-Bereich */
+.custom-accordion summary {
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+  list-style: none;                      /* Entfernt den Standard-Browser-Pfeil */
+  display: flex;
+  justify-content: space-between;        /* Drückt den Text nach links, den Pfeil nach rechts */
+  align-items: center;
+}
+
+/* Custom-Pfeil auf der rechten Seite (analog zum Zensical-Blau) */
+.custom-accordion summary::after {
+  content: "›";
+  font-size: 1.4rem;
+  color: #58a6ff;                        /* Typisches Zensical-Blau für Links/Icons */
+  transition: transform 0.2s ease;
+}
+
+/* Dreht den Pfeil flüssig nach unten, wenn die Box geöffnet wird */
+.custom-accordion[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/* Verhindert unschöne Chrome- / Webkit-Standardpfeile */
+.custom-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* ==========================================================================
+   4. INHALT: LINKSBÜNDIG AUSGERICHTETE BUTTONS (2-Spalten-Raster)
+   ========================================================================== */
+
+/* Ein stabile Grid im Inneren für absolut gleichmäßige Buttons */
+.badges-container-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Genau 2 gleich breite Spalten */
+  gap: 0.5rem;                           /* Kompakter Abstand zwischen den Buttons */
+  margin-top: 1rem;                      /* Abstand zum Header-Text */
+  width: 100%;
+}
+
+/* Kleine, kompakte Buttons, von links beginnend ausgrichtet */
+.skill-badge {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #1c1c1e;
+  
+  font-size: 0.68rem;                    /* Verkleinert, damit lange Texte in eine Zeile passen */
+  font-weight: 500;
+  padding: 0.5rem 0.6rem;                /* Perfekt ausbalanciertes Innen-Padding */
+  border-radius: 8px;                    /* Angenehm abgerundete Ecken */
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;           /* Inhalt fängt immer links an */
+  gap: 0.5rem;                           /* Abstand zwischen Icon und Text */
+  cursor: default;
+  box-sizing: border-box;
+  width: 100%;                           /* Füllt die Grid-Spalte komplett aus */
+  
+  /* Verhindert hartnäckig jeglichen Zeilenumbruch */
+  white-space: nowrap;                   
+  overflow: hidden;
+  text-overflow: ellipsis;               /* Schneidet im absoluten Notfall sauber mit ... ab */
+  
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Kompakte Icons innerhalb der Badges */
+.skill-badge img,
+.skill-badge svg {
+  width: 14px !important; 
+  height: 14px !important; 
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 0.1rem;                   /* Minimaler Abstand zum linken Button-Rand */
+}
+
+/* Leichter Zoom- und Aufhellexfekt beim Hovern */
+.skill-badge:hover {
+  background-color: #0c0c0e;
+  border-color: #3a3a3c;
+  transform: scale(1.03);                /* Dezenter Zoom beim Hover */
+}
+
+
+/* ==========================================================================
+   5. RESPONSIVENESS: MOBIL-LAYOUT (Für Smartphones)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .skills-grid-2x2 {
+    grid-template-columns: 1fr;         /* Schaltet auf Handys auf 1 Spalte um */
+    gap: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -926,29 +940,6 @@
 
 /* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
 .md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="projects"]) {
-  display: block !important;
-}
-
-/* ==========================================================================
-   STAFF THINGS NAVI-REITER INTUITIV STEUERN
-   ========================================================================== */
-
-/* 1. Im Normalzustand (z. B. auf der Startseite) Staff Things überall ausblenden */
-.md-tabs__list .md-tabs__item:has(a[href*="staff"]),
-.md-nav--primary > .md-nav__list > .md-nav__item:has(a[href*="staff"]) {
-  display: none !important;
-}
-
-/* 2. Sobald eine Seite AUS DEM STAFF-SYSTEM aktiv geöffnet ist,
-   blenden wir den oberen Tab UND die linke Seitenleiste sofort wieder ein */
-.md-tabs__list .md-tabs__item--active:has(a[href*="staff"]),
-.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="staff"]),
-.md-nav__item--active .md-nav__list .md-nav__item {
-  display: inline-block !important;
-}
-
-/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
-.md-nav--primary > .md-nav__list > .md-nav__item--active:has(a[href*="staff"]) {
   display: block !important;
 }
 

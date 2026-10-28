@@ -1,3 +1,7 @@
+---
+icon: simple/markdown
+---
+
 <div class="contact-section">
   <h1 class="contact-subtitle">Contact Me!</h1>
 

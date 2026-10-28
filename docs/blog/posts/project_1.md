@@ -35,19 +35,19 @@ tags:
     
     <!-- Unity Badge -->
     <span class="tech-badge">
-      <img class="tech-icon" src="custom/alien.svg" alt="?">
+      <img class="tech-icon" src="" alt="?">
       Unity Engine
     </span>
 
     <!-- C# Badge -->
     <span class="tech-badge">
-      <img class="tech-icon" src="./assets/icons/csharp.svg" alt="?">
+      <img class="tech-icon" src="" alt="?">
       C#
     </span>
 
     <!-- Blender Badge -->
     <span class="tech-badge">
-      <img class="tech-icon" src="./assets/icons/blender.svg" alt="?">
+      <img class="tech-icon" src="" alt="?">
       Blender
     </span>
 
