@@ -1,0 +1,152 @@
+/* Haupt-Sektion */
+.metrics-section {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  padding: 2.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Kleinerer Titel ganz oben */
+.metrics-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+/* Große, graue Headline */
+.metrics-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #8e8e93;
+  margin: 0 0 2rem 0;
+}
+
+/* Grid für die beiden großen Kacheln */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Die großen Statistik-Karten mit Hover-Outline-Effekt */
+.metric-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  box-sizing: border-box;
+
+  /* FIX: Outline transparent vordefinieren, um weißes Aufblitzen zu verhindern */
+  outline: 3.5px solid transparent;
+  outline-offset: -3.5px;
+
+  /* Flüssige Animation für alle Eigenschaften beim Hovern */
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, outline-color 0.25s ease;
+}
+
+/* Hover-Zustand für die Kacheln: Vergrößern und rote Outline */
+.metric-card:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+
+  /* Karte wächst dezent um 3% */
+  transform: scale(1.03);
+
+  /* Outline färbt sich ohne Verzögerung rot */
+  outline-color: #8a1a24;
+}
+
+/* Kopfzeile innerhalb einer Karte */
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Ausrichtung der Icons */
+.metric-icon svg,
+.metric-icon img {
+  width: 18px !important;
+  height: 18px !important;
+  vertical-align: middle;
+}
+
+/* Hauptbereich der Karte zentrieren */
+.metric-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.metric-body.btn-layout {
+  justify-content: space-between;
+}
+
+/* Die riesigen Statistik-Zahlen */
+.metric-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+/* Kleiner Text unter der Zahl */
+.metric-hint {
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+/* Der rote "Love this portfolio" Button */
+.btn-love {
+  background-color: #8a1a24;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-love:hover:not(:disabled) {
+  background-color: #a71f2b;
+  transform: scale(1.03);
+}
+
+.btn-love svg,
+.btn-love img {
+  width: 14px !important;
+  height: 14px !important;
+  fill: #ffffff !important;
+}
+
+/* Farbklasse für dein Theme-Rot */
+.text-red {
+  color: #8a1a24;
+}
+
+.text-red svg {
+  fill: #8a1a24 !important;
+  color: #8a1a24 !important;
+}

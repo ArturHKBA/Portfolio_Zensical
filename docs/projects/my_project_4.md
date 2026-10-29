@@ -1,5 +1,5 @@
 ---
-icon: img/unity
+icon: vr
 ---
 
 # Markdown in 5min

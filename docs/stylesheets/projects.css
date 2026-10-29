@@ -1,0 +1,97 @@
+/* Das Raster – jetzt mit optimaler Breite für ein ausgewogenes Layout */
+.custom-grid {
+  display: grid;
+  /* Mindestbreite um 50% von 275px auf 412px angehoben */
+  grid-template-columns: repeat(auto-fit, minmax(412px, 1fr));
+  gap: 1.75rem;
+  /* Leicht erhöhter Abstand passend zur neuen Größe */
+  padding: 1.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Die Karten im transparenten Glassmorphismus-Look */
+.custom-card {
+  background-color: rgba(255, 255, 255, 0.03);
+
+  /* Der Unschärfe-Effekt für den Hintergrund */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Subtiler, dünner Rahmen */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  /* Perfekter Innenabstand für diese Boxengröße */
+  display: flex;
+  flex-direction: column;
+  min-height: 190px;
+  box-sizing: border-box;
+
+  /* ERWEITERT: Outline dicker vordefiniert und Versatz erhöht, damit sie perfekt anliegt */
+  outline: 3.5px solid transparent;
+  outline-offset: -3.5px;
+
+  /* Flüssiger Übergang für alle Hintergrund-, Skalierungs- und Outline-Änderungen */
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, outline-color 0.25s ease;
+}
+
+/* Eleganter Hover-Effekt: Karte wird größer und die rote, dicke Outline erscheint */
+.custom-card:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+
+  /* NEU: Karte flüssig um 4% vergrößern */
+  transform: scale(1.04);
+
+  /* Wechselt beim Hovern direkt und ohne Blitzen auf das Zensical-Dunkelrot */
+  outline-color: #8a1a24;
+}
+
+/* Titel oben */
+.custom-card h3 {
+  margin: 0 0 0.85rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* Beschreibungstext */
+.card-text {
+  font-size: 0.95rem;
+  color: #a0aec0;
+  line-height: 1.55;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+/* Formatierung für Inline-Code */
+.inline-code {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+/* Der "Learn More..." Link unten links */
+.card-link {
+  color: #718096;
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: #a0aec0;
+  text-decoration: underline;
+}
+
+/* Sauberer Umbruch für schmale mobile Bildschirme */
+@media (max-width: 480px) {
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+}

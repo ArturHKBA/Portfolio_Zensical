@@ -4,7 +4,13 @@ site_url = "https://www.example.com/"
 site_name = "Mein Projekt"
 site_description = "Willkommen"
 site_author = "Artur"
-extra_css = ["stylesheets/extra.css"]
+extra_css = [
+  "stylesheets/extra.css",
+  "stylesheets/contact.css",
+  "stylesheets/feedback.css",
+  "stylesheets/projects.css",
+  "stylesheets/tools.css",
+]
 copyright = """
   Copyright &copy; 2026 Artur LLC –
   <a href="#__consent">Change cookie settings</a>
@@ -47,9 +53,9 @@ nav = [
 
   { "Major Projects" = [
 
-    { "2016 – 2019 | Unity Engine" = "projects/my_project_1.md" },
+    { "2016 – 2019 | U Engine" = "projects/my_project_1.md" },
     { "2019 – 2021 | Modding Frameworks" = "projects/my_project_2.md" },
-    { "2022 – 2024 | Unity Engine" = "projects/my_project_3.md" },
+    { "2022 – 2024 | U Engine" = "projects/my_project_3.md" },
     { "2025 – Present | Current Works" = "projects/my_project_4.md" },
 
   ] },
@@ -195,8 +201,8 @@ enabled = true
 Compatibility = "TEST"
 
 [project.theme.icon.tag]
-default = "img/alien"
-Compatibility = "img/alien"
+default = ""
+Compatibility = ""
 
 [project.extra.consent]
 title = "Cookie consent"

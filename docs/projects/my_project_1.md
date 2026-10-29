@@ -1,5 +1,6 @@
 ---
-icon: img/unity
+icon: unity
+
 ---
 
 # **MY PROJECTS**

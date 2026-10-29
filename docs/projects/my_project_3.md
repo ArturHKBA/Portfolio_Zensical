@@ -1,5 +1,5 @@
 ---
-icon: img/unity
+icon: unity
 ---
 
 # Markdown in 5min

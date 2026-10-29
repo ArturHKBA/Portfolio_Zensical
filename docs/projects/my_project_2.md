@@ -1,5 +1,5 @@
 ---
-icon: img/unity
+icon: modding
 ---
 
 # Markdown in 5min
