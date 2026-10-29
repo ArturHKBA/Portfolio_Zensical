@@ -193,8 +193,8 @@ h1+p {
 /* Kompakte Icons innerhalb der Badges */
 .skill-badge img,
 .skill-badge svg {
-  width: 14px !important;
-  height: 14px !important;
+  width: 25px !important;
+  height: 25px !important;
   object-fit: contain;
   display: inline-block;
   flex-shrink: 0;
