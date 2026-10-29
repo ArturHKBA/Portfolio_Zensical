@@ -84,23 +84,19 @@ h1+p {
 }
 
 
-
-
-
 /* ==========================================================================
-   3. KOMPONENTE: FORMATIERERSICHERE DETAILS-BOXEN (Ersatz für Zensical-Notes)
+   3. KOMPONENTE: FORMATIERERSICHERE DETAILS-BOXEN (Transparentes Dunkelrot)
    ========================================================================== */
 
 .custom-accordion {
-  background-color: #0d1117;
-  /* Dunkler Hintergrund aus dem Screenshot */
-  border: 1px solid #21262d;
-  /* Dezente Umrandung */
+  /* Exakter matter, dunkler Hintergrund aus deinem Navigations-Screenshot */
+  background-color: #1e1113 !important;
+  /* Dezenter, passender rot-brauner Rand */
+  border: 1px solid #381e21 !important;
   border-radius: 6px;
   padding: 0.75rem 1rem;
   width: 100%;
   box-sizing: border-box;
-
   margin: 0;
 }
 
@@ -113,19 +109,31 @@ h1+p {
   cursor: pointer;
   outline: none;
   list-style: none;
-  /* Entfernt den Standard-Browser-Pfeil */
   display: flex;
   justify-content: space-between;
-  /* Drückt den Text nach links, den Pfeil nach rechts */
   align-items: center;
 }
 
-/* Custom-Pfeil auf der rechten Seite (analog zum Zensical-Blau) */
+/* RADIKALER FIX: Blendet jedes automatisch generierte Bild, SVG oder Pseudoelement 
+   aus, das Zensical links vor das Wort "Game Engines" setzt */
+.custom-accordion summary::before,
+.custom-accordion summary img,
+.custom-accordion summary svg,
+.custom-accordion summary .admonition-title-icon {
+  display: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Custom-Pfeil auf der rechten Seite (Jetzt farblich an Rot angepasst) */
 .custom-accordion summary::after {
   content: "›";
   font-size: 1.4rem;
-  color: #58a6ff;
-  /* Typisches Zensical-Blau für Links/Icons */
+  color: #c9d1d9 !important;
+  /* Roter Pfeil statt Zensical-Blau */
   transition: transform 0.2s ease;
 }
 
@@ -176,7 +184,7 @@ h1+p {
   /* Inhalt fängt immer links an */
   gap: 0.5rem;
   /* Abstand zwischen Icon und Text */
-  cursor: default;
+  cursor: pointer;
   box-sizing: border-box;
   width: 100%;
   /* Füllt die Grid-Spalte komplett aus */
@@ -190,9 +198,9 @@ h1+p {
   transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, border-color 0.15s ease;
 }
 
-/* Kompakte Icons innerhalb der Badges */
-.skill-badge img,
-.skill-badge svg {
+/* Kompakte Brand-Icons innerhalb der Badges (z.B. Unity, Blender, etc.) */
+.skill-badge>img,
+.skill-badge>svg {
   width: 25px !important;
   height: 25px !important;
   object-fit: contain;
@@ -202,12 +210,49 @@ h1+p {
   /* Minimaler Abstand zum linken Button-Rand */
 }
 
-/* Leichter Zoom- und Aufhellexfekt beim Hovern */
+/* Der Text-Link umschließt das Label und das kleine Pfeil-Icon */
+.skill-badge a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* NEU: Das Gehäuse/Rahmen für das link.svg Symbol auf der rechten Seite */
+.skill-badge a img[src*="link.svg"],
+.skill-badge a svg:last-child {
+  width: 13px !important;
+  height: 13px !important;
+  padding: 2px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  /* Matte, unaufdringliche Box */
+  border-radius: 4px !important;
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  opacity: 0.65;
+  margin-left: auto;
+  /* Schiebt das Icon an das absolute rechte Ende des Buttons */
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+/* Leichter Zoom- und Aufhellexfekt beim Hovern auf den gesamten Button */
 .skill-badge:hover {
   background-color: #0c0c0e;
   border-color: #3a3a3c;
-  transform: scale(1.03);
-  /* Dezenter Zoom beim Hover */
+  transform: scale(1.02);
+  /* Minimal reduzierter Zoom für ein flüssigeres Gefühl im Grid */
+}
+
+/* Highlight-Effekt für das kleine Link-Icon, wenn der Button gehovert wird */
+.skill-badge:hover a img[src*="link.svg"],
+.skill-badge:hover a svg:last-child {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 
