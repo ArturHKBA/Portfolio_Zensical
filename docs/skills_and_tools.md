@@ -2,9 +2,7 @@
 icon: material/tools
 ---
 
-## Skills & Tools
-
-# Learned by coding all night and debugging all day!
+Learned by coding all night and debugging all day!
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -14,15 +12,15 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
     <div class="badges-container-horizontal">
       <span class="skill-badge">
         <img src="img/brands/unity.svg" alt=""> 
-        <a href="https://unity.com/" target="_blank" style="text-decoration: none; color: inherit;">Unity Engine 5-7 <span>↗</span></a>
+        <a href="https://unity.com/" target="_blank" style="text-decoration: none; color: inherit;">Unity Engine <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/unrealengine.svg" alt=""> 
+        <a href="https://www.unrealengine.com/" target="_blank" style="text-decoration: none; color: inherit;">Unreal Engine <span>↗</span></a>
       </span>
       <span class="skill-badge">
         <img src="img/brands/godot.svg" alt=""> 
         <a href="https://godotengine.org" target="_blank" style="text-decoration: none; color: inherit;">Godot Engine <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/unreal_engine.svg" alt=""> 
-        <a href="https://www.unrealengine.com/" target="_blank" style="text-decoration: none; color: inherit;">Unreal Engine 3-5 <span>↗</span></a>
       </span>
       <span class="skill-badge">
         <img src="img/brands/cryengine.svg" alt=""> 
@@ -30,6 +28,9 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       </span>
     </div>
   </details>
+
+
+
   <details class="custom-accordion">
     <summary>3D Modeling & Art</summary>
     <div class="badges-container-horizontal">
@@ -42,27 +43,34 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
         <a href="https://www.autodesk.com/products/maya/overview" target="_blank" style="text-decoration: none; color: inherit;">Autodesk Maya <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/3ds_max.svg" alt=""> 
+        <img src="img/brands/zbrush.svg" alt=""> 
+        <a href="https://www.maxon.net/en/zbrush" target="_blank" style="text-decoration: none; color: inherit;">ZBrush <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/3dsmax.svg" alt=""> 
         <a href="https://www.autodesk.com/products/3ds-max/overview" target="_blank" style="text-decoration: none; color: inherit;">3ds Max <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/substance_modeler.svg" alt=""> 
+        <img src="img/brands/.svg" alt=""> 
+        <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/substancemodeler.svg" alt=""> 
         <a href="https://www.adobe.com/products/substance3d/apps/modeler.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Modeler <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/substance_painter.svg" alt=""> 
+        <img src="img/brands/substancepainter.svg" alt=""> 
         <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Painter <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/substance_designer.svg" alt=""> 
+        <img src="img/brands/substancedesigner.svg" alt=""> 
         <a href="https://www.adobe.com/products/substance3d/apps/designer.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Designer <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/zmodeler.svg" alt=""> 
-        <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
       </span>
     </div>
   </details>
+
+
+
   <details class="custom-accordion">
     <summary>Programming Languages</summary>
     <div class="badges-container-horizontal">
@@ -87,26 +95,17 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
         Lua
       </span>
       <span class="skill-badge">
-        <img src="img/brands/html.svg" alt=""> 
-        HTML
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/css.svg" alt=""> 
-        CSS
+        <img src="img/brands/typescript.svg" alt=""> 
+        TypeScript
       </span>
     </div>
   </details>
+
+
+
   <details class="custom-accordion">
-    <summary>Miscellaneous & Tools</summary>
+    <summary>Development & Design Tools</summary>
     <div class="badges-container-horizontal">
-      <span class="skill-badge">
-        <img src="img/brands/fmod.svg" alt=""> 
-        <a href="https://www.fmod.com/" target="_blank" style="text-decoration: none; color: inherit;">FMOD Studio <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/material_ui.svg" alt=""> 
-        <a href="https://mui.com/material-ui/" target="_blank" style="text-decoration: none; color: inherit;">Material UI <span>↗</span></a>
-      </span>
       <span class="skill-badge">
         <img src="img/brands/git.svg" alt=""> 
         <a href="https://git-scm.com/" target="_blank" style="text-decoration: none; color: inherit;">Git <span>↗</span></a>
@@ -115,10 +114,33 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
         <img src="img/brands/github.svg" alt=""> 
         <a href="https://github.com/" target="_blank" style="text-decoration: none; color: inherit;">GitHub <span>↗</span></a>
       </span>
+      <span class="skill-badge">
+        <img src="img/brands/fmod.svg" alt=""> 
+        <a href="https://www.fmod.com/" target="_blank" style="text-decoration: none; color: inherit;">FMOD Studio <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/materialui.svg" alt=""> 
+        <a href="https://mui.com/material-ui/" target="_blank" style="text-decoration: none; color: inherit;">Material UI <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/html.svg" alt=""> 
+        HTML
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/css.svg" alt=""> 
+        CSS
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/tailwindcss.svg" alt=""> 
+        Tailwind CSS 
+      </span>
     </div>
   </details>
 </div>
 
+
+
+#Adobe Photoshop und Adobe After Effects
 
 
 
