@@ -1,3 +1,7 @@
+---
+icon: material/clipboard-check
+---
+
 <div class="metrics-section">
   <h2>Your Feedback</h2>
   <h1 class="metrics-subtitle">Statistics</h1>

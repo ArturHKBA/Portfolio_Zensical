@@ -1,5 +1,5 @@
 ---
-icon: simple/markdown
+icon: material/email
 ---
 
 <div class="contact-section">
