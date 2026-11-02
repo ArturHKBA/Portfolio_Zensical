@@ -81,10 +81,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       <span class="skill-badge">
         <img src="img/brands/zbrush.svg" alt=""> 
         <a href="https://www.maxon.net/en/zbrush" target="_blank" style="text-decoration: none; color: inherit;">ZBrush <span>↗</span></a>
+      </span>
       <span class="skill-badge">
         <img src="img/brands/zmodeler.svg" alt=""> 
         <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
-      </span>
       </span>
       <span class="skill-badge">
         <img src="img/brands/3dsmax.svg" alt=""> 
