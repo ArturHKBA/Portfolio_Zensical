@@ -60,12 +60,12 @@ h1+p {
 
 /* Miscellaneous & Tools (Oben Rechts) */
 .skills-grid-2x2 .custom-accordion:nth-of-type(2) {
-  order: 4;
+  order: 3;
 }
 
 /* 3D Modeling & Art (Unten Links) */
 .skills-grid-2x2 .custom-accordion:nth-of-type(3) {
-  order: 3;
+  order: 4;
 }
 
 /* Programming Languages (Unten Rechts) */
