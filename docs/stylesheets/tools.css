@@ -55,7 +55,7 @@ h1+p {
 
 /* Game Engines (Oben Links) */
 .skills-grid-2x2 .custom-accordion:nth-of-type(4) {
-  order: 4;
+  order: 2;
 }
 
 /* Miscellaneous & Tools (Oben Rechts) */
@@ -65,7 +65,7 @@ h1+p {
 
 /* 3D Modeling & Art (Unten Links) */
 .skills-grid-2x2 .custom-accordion:nth-of-type(3) {
-  order: 2;
+  order: 4;
 }
 
 /* Programming Languages (Unten Rechts) */
