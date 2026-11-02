@@ -55,12 +55,12 @@ h1+p {
 
 /* Game Engines (Oben Links) */
 .skills-grid-2x2 .custom-accordion:nth-of-type(4) {
-  order: 4;
+  order: 3;
 }
 
 /* Miscellaneous & Tools (Oben Rechts) */
 .skills-grid-2x2 .custom-accordion:nth-of-type(2) {
-  order: 3;
+  order: 4;
 }
 
 /* 3D Modeling & Art (Unten Links) */

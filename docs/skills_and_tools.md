@@ -79,12 +79,12 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
         <a href="https://www.autodesk.com/products/maya/overview" target="_blank" style="text-decoration: none; color: inherit;">Autodesk Maya <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/zbrush.svg" alt=""> 
-        <a href="https://www.maxon.net/en/zbrush" target="_blank" style="text-decoration: none; color: inherit;">ZBrush <span>↗</span></a>
+        <img src="img/brands/photoshop.svg" alt=""> 
+        <a href="https://www.adobe.com/products/photoshop.html" target="_blank" style="text-decoration: none; color: inherit;">Adobe Photoshop <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/zmodeler.svg" alt=""> 
-        <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
+        <img src="img/brands/aftereffects.svg" alt=""> 
+        <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" style="text-decoration: none; color: inherit;">Adobe After Effects <span>↗</span></a>
       </span>
       <span class="skill-badge">
         <img src="img/brands/3dsmax.svg" alt=""> 
@@ -103,12 +103,12 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
         <a href="https://www.adobe.com/products/substance3d/apps/designer.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Designer <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/photoshop.svg" alt=""> 
-        <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Adobe Photoshop <span>↗</span></a>
+        <img src="img/brands/zbrush.svg" alt=""> 
+        <a href="https://www.maxon.net/en/zbrush" target="_blank" style="text-decoration: none; color: inherit;">ZBrush <span>↗</span></a>
       </span>
       <span class="skill-badge">
-        <img src="img/brands/aftereffects.svg" alt=""> 
-        <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Adobe After Effects <span>↗</span></a>
+        <img src="img/brands/zmodeler.svg" alt=""> 
+        <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
       </span>
     </div>
   </details>
