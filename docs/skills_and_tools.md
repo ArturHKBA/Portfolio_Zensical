@@ -31,44 +31,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 
 
-  <details class="custom-accordion">
-    <summary>3D Modeling & Art</summary>
-    <div class="badges-container-horizontal">
-      <span class="skill-badge">
-        <img src="img/brands/blender.svg" alt=""> 
-        <a href="https://www.blender.org/" target="_blank" style="text-decoration: none; color: inherit;">Blender <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/maya.svg" alt=""> 
-        <a href="https://www.autodesk.com/products/maya/overview" target="_blank" style="text-decoration: none; color: inherit;">Autodesk Maya <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/zbrush.svg" alt=""> 
-        <a href="https://www.maxon.net/en/zbrush" target="_blank" style="text-decoration: none; color: inherit;">ZBrush <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/3dsmax.svg" alt=""> 
-        <a href="https://www.autodesk.com/products/3ds-max/overview" target="_blank" style="text-decoration: none; color: inherit;">3ds Max <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/.svg" alt=""> 
-        <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/substancemodeler.svg" alt=""> 
-        <a href="https://www.adobe.com/products/substance3d/apps/modeler.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Modeler <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/substancepainter.svg" alt=""> 
-        <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Painter <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/substancedesigner.svg" alt=""> 
-        <a href="https://www.adobe.com/products/substance3d/apps/designer.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Designer <span>↗</span></a>
-      </span>
-    </div>
-  </details>
-
 
 
   <details class="custom-accordion">
@@ -100,6 +62,58 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       </span>
     </div>
   </details>
+
+
+
+
+
+  <details class="custom-accordion">
+    <summary>3D Modeling & Art</summary>
+    <div class="badges-container-horizontal">
+      <span class="skill-badge">
+        <img src="img/brands/blender.svg" alt=""> 
+        <a href="https://www.blender.org/" target="_blank" style="text-decoration: none; color: inherit;">Blender <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/maya.svg" alt=""> 
+        <a href="https://www.autodesk.com/products/maya/overview" target="_blank" style="text-decoration: none; color: inherit;">Autodesk Maya <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/zbrush.svg" alt=""> 
+        <a href="https://www.maxon.net/en/zbrush" target="_blank" style="text-decoration: none; color: inherit;">ZBrush <span>↗</span></a>
+      <span class="skill-badge">
+        <img src="img/brands/zmodeler.svg" alt=""> 
+        <a href="https://www.zmodeler3.com/" target="_blank" style="text-decoration: none; color: inherit;">ZModeler <span>↗</span></a>
+      </span>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/3dsmax.svg" alt=""> 
+        <a href="https://www.autodesk.com/products/3ds-max/overview" target="_blank" style="text-decoration: none; color: inherit;">3ds Max <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/substancemodeler.svg" alt=""> 
+        <a href="https://www.adobe.com/products/substance3d/apps/modeler.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Modeler <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/substancepainter.svg" alt=""> 
+        <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Painter <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/substancedesigner.svg" alt=""> 
+        <a href="https://www.adobe.com/products/substance3d/apps/designer.html" target="_blank" style="text-decoration: none; color: inherit;">Substance 3D Designer <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/photoshop.svg" alt=""> 
+        <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Adobe Photoshop <span>↗</span></a>
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/aftereffects.svg" alt=""> 
+        <a href="https://www.adobe.com/products/substance3d/apps/painter.html" target="_blank" style="text-decoration: none; color: inherit;">Adobe After Effects <span>↗</span></a>
+      </span>
+    </div>
+  </details>
+
+
 
 
 
@@ -137,10 +151,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
     </div>
   </details>
 </div>
-
-
-
-#Adobe Photoshop und Adobe After Effects
 
 
 
