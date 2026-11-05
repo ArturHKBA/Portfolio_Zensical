@@ -25,7 +25,7 @@ Implemented simple enemy AI utilizing Unity’s NavMesh system and custom waypoi
 Demonstrating the dynamic patrol routine between the custom waypoint scripts.
 
 <video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-  <source src="/vid/Enemy_waypoints.mp4" type="video/mp4">
+  <source src="../vid/Enemy_waypoints.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -35,7 +35,7 @@ Demonstrating the dynamic patrol routine between the custom waypoint scripts.
 Visualizing the underlying Unity NavMesh calculation and pathfinding system in action.
 
 <video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-  <source src="/vid/Navmesh_preview.mp4" type="video/mp4">
+  <source src="../vid/Navmesh_preview.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
