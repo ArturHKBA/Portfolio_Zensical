@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 
   <details class="custom-accordion">
-    <summary>Programming Languages</summary>
+    <summary>Programming & Web Technologies</summary>
     <div class="badges-container-horizontal">
       <span class="skill-badge">
         <img src="img/brands/csharp.svg" alt=""> 
@@ -57,8 +57,16 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
         Lua
       </span>
       <span class="skill-badge">
-        <img src="img/brands/typescript.svg" alt=""> 
-        TypeScript
+        <img src="img/brands/html.svg" alt=""> 
+        HTML
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/css.svg" alt=""> 
+        CSS
+      </span>
+      <span class="skill-badge">
+        <img src="img/brands/tailwindcss.svg" alt=""> 
+        Tailwind CSS 
       </span>
     </div>
   </details>
@@ -68,7 +76,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 
   <details class="custom-accordion">
-    <summary>3D Modeling & Art</summary>
+    <summary>3D Art & Design</summary>
     <div class="badges-container-horizontal">
       <span class="skill-badge">
         <img src="img/brands/blender.svg" alt=""> 
@@ -118,7 +126,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 
   <details class="custom-accordion">
-    <summary>Development & Design Tools</summary>
+    <summary>Development & Productive Tools</summary>
     <div class="badges-container-horizontal">
       <span class="skill-badge">
         <img src="img/brands/git.svg" alt=""> 
@@ -135,18 +143,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       <span class="skill-badge">
         <img src="img/brands/materialui.svg" alt=""> 
         <a href="https://mui.com/material-ui/" target="_blank" style="text-decoration: none; color: inherit;">Material UI <span>↗</span></a>
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/html.svg" alt=""> 
-        HTML
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/css.svg" alt=""> 
-        CSS
-      </span>
-      <span class="skill-badge">
-        <img src="img/brands/tailwindcss.svg" alt=""> 
-        Tailwind CSS 
       </span>
     </div>
   </details>
