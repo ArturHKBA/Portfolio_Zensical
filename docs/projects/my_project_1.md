@@ -48,7 +48,7 @@ Implemented simple enemy AI utilizing Unity’s NavMesh system and custom waypoi
 Demonstrating the dynamic patrol routine between the custom waypoint scripts.
 
 <video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 0.5em;">
-  <source src="/vid/Enemy_waypoints.mp4" type="video/mp4">
+  <source src="../vid/Enemy_waypoints.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -58,7 +58,7 @@ Demonstrating the dynamic patrol routine between the custom waypoint scripts.
 Visualizing the underlying Unity NavMesh calculation and pathfinding system in action.
 
 <video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 0.5em;">
-  <source src="/vid/Navmesh_preview.mp4" type="video/mp4">
+  <source src="../vid/Navmesh_preview.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -171,7 +171,7 @@ By utilizing collision detection within the Particle System, I ensured that ever
 </div>
 
 <video controls style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: auto; padding-top: 0.5em;">
-  <source src="/vid/Blood_particle.mp4" type="video/mp4">
+  <source src="../vid/Blood_particle.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -197,8 +197,8 @@ High-resolution overview and inspectable detail showcase of the compiled custom 
 <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; margin-top: 0.5em; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" 
      onclick="this.querySelector('.spoiler-overlay').style.display='none'; this.querySelector('img').style.filter='none'; this.querySelector('a').click();">
   
-  <a href="/img/portfolio/Gore.png" class="glightbox" style="display: block;" onclick="event.stopPropagation();">
-    <img src="/img/portfolio/Gore.png" alt="Gore Preview" style="width: 100%; height: auto; filter: blur(25px); transition: filter 0.3s ease; cursor: pointer;">
+  <a href="../img/portfolio/Gore.png" class="glightbox" style="display: block;" onclick="event.stopPropagation();">
+    <img src="../img/portfolio/Gore.png" alt="Gore Preview" style="width: 100%; height: auto; filter: blur(25px); transition: filter 0.3s ease; cursor: pointer;">
   </a>
 
   <div class="spoiler-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; padding: 20px; text-align: center; cursor: pointer;">
@@ -221,7 +221,7 @@ High-resolution overview and inspectable detail showcase of the compiled custom 
 I crafted a variety of animations, with a heavy focus on first-person movements. My goal was to move away from robotic motions and create a feel that’s fluid and immersive for the player.
 
 <video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 0.5em;">
-  <source src="/vid/Reload.mp4" type="video/mp4">
+  <source src="../vid/Reload.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -246,8 +246,8 @@ I crafted a variety of animations, with a heavy focus on first-person movements.
     <span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Atmospheric Environment</span>
     <p style="margin-bottom: 1em;">Overview of the atmospheric scene design and lighting setup used to construct the trigger zones for the player states.</p>
   </div>
-  <a href="/img/portfolio/Scene.png" class="glightbox" style="width: 100%; aspect-ratio: 16/9; display: block; margin-top: auto;">
-    <img src="/img/portfolio/Scene.png" alt="Scene Preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer; display: block;">
+  <a href="../img/portfolio/Scene.png" class="glightbox" style="width: 100%; aspect-ratio: 16/9; display: block; margin-top: auto;">
+    <img src="../img/portfolio/Scene.png" alt="Scene Preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer; display: block;">
   </a>
 </div>
 
@@ -265,10 +265,10 @@ Performance optimization is very important, which is why I also worked on a comp
 <!-- -Slider Container -->
 <div style="position: relative; width: 100%; padding-top: 48.828%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 1.5em; user-select: none; --slider-pos: 50%;">
   
-  <img src="/img/portfolio/Graphics_setting_high.png" alt="Very High Graphics" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: fill; display: block;">
+  <img src="../img/portfolio/Graphics_setting_high.png" alt="Very High Graphics" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: fill; display: block;">
   
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: polygon(0 0, var(--slider-pos) 0, var(--slider-pos) 100%, 0 100%);">
-    <img src="/img/portfolio/Graphics_setting_low.png" alt="Very Low Graphics" style="width: 100%; height: 100%; object-fit: fill; display: block;">
+    <img src="../img/portfolio/Graphics_setting_low.png" alt="Very Low Graphics" style="width: 100%; height: 100%; object-fit: fill; display: block;">
     <span style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; z-index: 2;">VERY LOW</span>
   </div>
   
@@ -305,8 +305,8 @@ Performance optimization is very important, which is why I also worked on a comp
 <div style="grid-column: span 2;" markdown>
 I built a flexible input system with full support for Xbox and DualShock controllers. My goal was to make sure playing on a PC feels just as smooth and responsive as playing on a console.
 
-<a href="/img/portfolio/Gamepad.png" class="glightbox" style="display: block; margin-top: 1em;">
-  <img src="/img/portfolio/Gamepad.png" alt="Cross-Platform Input Showcase" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer;">
+<a href="../img/portfolio/Gamepad.png" class="glightbox" style="display: block; margin-top: 1em;">
+  <img src="../img/portfolio/Gamepad.png" alt="Cross-Platform Input Showcase" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer;">
 </a>
 
 <div style="margin-top: 1em; font-size: 0.9em; display: inline-flex; align-items: center; gap: 8px;">
