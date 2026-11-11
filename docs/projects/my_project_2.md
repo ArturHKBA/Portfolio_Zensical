@@ -273,46 +273,27 @@ icon: modding
 
 !!! info "Community Contributions & Open Source"
 
-    <div class="grid" style="grid-template-columns: 1fr; gap: 20px; align-items: center;" markdown>
-    
-    <div style="text-align: left;" markdown>
-    Beyond my main systems, I love giving back to the modding scene. I have released several free scripts and mapping projects to help other server owners level up their realism. For me, it’s always been about blending technical polish with solid environmental storytelling.
-    </div>
-    
-    <a href="../img/portfolio/WIP.png" class="glightbox" style="display: block; max-width: 500px; margin: 0 auto; width: 100%;">
-      <img src="../img/portfolio/WIP.png" alt="Work In Progress 3D Modeling" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    </a>
-    
-    </div>
-
-<br>
-
-## Other projects & world building:
-
-!!! info "Community Contributions & Open Source"
-
-    <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 24px; margin: 0; padding: 0; align-items: center;" markdown>
-    
-    <div style="display: flex; flex-direction: column; justify-content: center;" markdown>
-    Beyond my main systems, I love giving back to the modding scene. I have released several free scripts and mapping projects to help other server owners level up their realism. For me, it’s always been about blending technical polish with solid environmental storytelling.
-    </div>
-    
-    <div>
-      <a href="../img/portfolio/WIP.png" class="glightbox" style="display: block; width: 100%;">
-        <img src="../img/portfolio/WIP.png" alt="Work In Progress 3D Modeling" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block;">
-      </a>
-    </div>
-    
+    <div style="display: flex; gap: 32px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 12px;">
+      
+      <div style="flex: 1 1 350px; min-width: 300px; line-height: 1.7; font-size: 1.05em;" markdown>
+      Beyond my main systems, I love giving back to the modding scene. I have released several free scripts and mapping projects to help other server owners level up their realism. 
+      <br><br>
+      For me, it’s always been about blending technical polish with solid environmental storytelling.
+      </div>
+      
+      <div style="flex: 1 1 350px; max-width: 400px;">
+        <a href="../img/portfolio/WIP.png" class="glightbox" style="display: block; width: 100%;">
+          <img src="../img/portfolio/WIP.png" alt="Work In Progress 3D Modeling" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); display: block; border: 1px solid rgba(255,255,255,0.05);">
+        </a>
+      </div>
+      
     </div>
 
-<br>
 
 ## Custom Mapping & Level Design:
 
-<!-- 3-COLUMNS GRID FOR THE FIRST THREE PROJECTS -->
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 1em;">
 
-  <!-- CARD 1: LSIA Border Checkpoint -->
   <div style="background: var(--md-code-bg-color, #1e1e24); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
     <div>
       <span style="display: block; font-size: 1.2em; font-weight: bold; margin-bottom: 12px; color: var(--md-typeset-a-color, #2196f3);">LSIA Border Checkpoint</span>
@@ -321,12 +302,11 @@ icon: modding
       <b>Community:</b> To help other server owners, I released the full source files on public forums for anyone to use.
     </div>
     <div style="margin-top: 20px;">
-      <iframe src="https://youtube.com" title="LSIA Border Map Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" style="width: 100%; aspect-ratio: 16/9; border-radius: 6px; margin-bottom: 16px; display: block;"></iframe>
-      <a href="https://cfx.re" target="_blank" class="md-button md-button--primary" style="display: block; text-align: center; width: 100%;">View Cfx Release</a>
+      <iframe src="https://www.youtube.com/embed/MY1Vn3XYUdE?si=tmkhnlPU1iY4vayK" title="LSIA Border Map Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" style="width: 100%; aspect-ratio: 16/9; border-radius: 6px; margin-bottom: 16px; display: block;"></iframe>
+      <a href="https://forum.cfx.re/t/release-ymap-fivem-lsia-border-map-with-detailed-objects-interiors-dynamic-objects/1570768" target="_blank" class="md-button md-button--primary" style="display: block; text-align: center; width: 100%;">View Cfx Release</a>
     </div>
   </div>
 
-  <!-- CARD 2: Cayo Perico Infrastructure -->
   <div style="background: var(--md-code-bg-color, #1e1e24); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
     <div>
       <span style="display: block; font-size: 1.2em; font-weight: bold; margin-bottom: 12px; color: var(--md-typeset-a-color, #2196f3);">Cayo Perico Infrastructure</span>
@@ -338,11 +318,10 @@ icon: modding
       <a href="../img/portfolio/Forum_Cayo_Perico.png" class="glightbox" style="display: block; margin-bottom: 16px;">
         <img src="../img/portfolio/Forum_Cayo_Perico.png" alt="Cayo Perico Gas Station Map" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; display: block;">
       </a>
-      <a href="https://cfx.re" target="_blank" class="md-button md-button--primary" style="display: block; text-align: center; width: 100%;">View Cfx Release</a>
+      <a href="https://forum.cfx.re/t/release-cayo-perico-gas-pump-detailed-ymap-with-a-little-shop-dynamic-objects/1906934" target="_blank" class="md-button md-button--primary" style="display: block; text-align: center; width: 100%;">View Cfx Release</a>
     </div>
   </div>
 
-  <!-- CARD 3: Sandy Shores Sheriff Exterior -->
   <div style="background: var(--md-code-bg-color, #1e1e24); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
     <div>
       <span style="display: block; font-size: 1.2em; font-weight: bold; margin-bottom: 12px; color: var(--md-typeset-a-color, #2196f3);">Sandy Shores Sheriff Exterior</span>
@@ -354,45 +333,58 @@ icon: modding
       <a href="../img/portfolio/Forum_Border.png" class="glightbox" style="display: block; margin-bottom: 16px;">
         <img src="../img/portfolio/Forum_Border.png" alt="Sandy Shores Sheriff Station Map" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; display: block;">
       </a>
-      <a href="https://cfx.re" target="_blank" class="md-button md-button--primary" style="display: block; text-align: center; width: 100%;">View Cfx Release</a>
+      <a href="https://forum.cfx.re/t/sandy-shores-sheriff-exterior-map/1874666" target="_blank" class="md-button md-button--primary" style="display: block; text-align: center; width: 100%;">View Cfx Release</a>
     </div>
   </div>
 
 </div>
 
-<!-- FULL WIDTH BREAKOUT CARD FOR LEGION SQUARE -->
-<div style="background: var(--md-code-bg-color, #1e1e24); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 24px; margin-top: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-  <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center;" markdown>
+<div style="background: var(--md-code-bg-color, #1e1e24); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 24px; margin-top: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center;" markdown>
   
   <div>
-    <span style="display: block; font-size: 1.4em; font-weight: bold; margin-bottom: 12px; color: var(--md-typeset-a-color, #2196f3);">Legion Square Upgrade</span>
-    <b>The upgrade:</b> An outdoor objects overhaul bringing a dynamic Hotdog and Burger stand setup directly to the center of Los Santos.
-    <br><br>
-    <b>The design:</b> Focused heavily on high-fidelity prop placements and cozy sitting arrangements to transform a sterile concrete square into a vibrant community gathering zone.
-    <br><br>
-    <a href="https://cfx.re" target="_blank" class="md-button md-button--primary" style="display: inline-block; margin-top: 8px; text-align: center; min-width: 200px;">View Cfx Release</a>
+    <span style="display: block; font-size: 1.5em; font-weight: bold; margin-bottom: 16px; color: var(--md-typeset-a-color, #2196f3); letter-spacing: -0.3px;">Legion Square Upgrade</span>
+    <p style="margin-bottom: 16px; line-height: 1.6;"><b>The upgrade:</b> An outdoor objects overhaul bringing a dynamic Hotdog and Burger stand setup directly to the center of Los Santos.</p>
+    <p style="margin-bottom: 24px; line-height: 1.6;"><b>The design:</b> Focused heavily on high-fidelity prop placements and cozy sitting arrangements to transform a sterile concrete square into a vibrant community gathering zone.</p>
+    <a href="https://forum.cfx.re/t/release-map-fivem-legion-square-hotdog-burger-stand-outdoor-objects-upgrade/1468741" target="_blank" class="md-button md-button--primary" style="display: inline-block; text-align: center; min-width: 200px; border-radius: 6px; font-weight: bold;">View Cfx Release</a>
   </div>
   
   <div>
-    <a href="../img/portfolio/Forum_Legion_Square.png" class="glightbox" style="display: block; width: 100%;">
-      <img src="../img/portfolio/Forum_Legion_Square.png" alt="Legion Square Hotdog Stand Map" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    </a>
+    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.2); user-select: none; --slider-pos: 50%;">
+      
+      <img src="../img/portfolio/forum_legion_square_before2.png" alt="Legion Square Upgrade" style="width: 100%; height: auto; display: block; pointer-events: none;">
+      
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: polygon(0 0, var(--slider-pos) 0, var(--slider-pos) 100%, 0 100%);">
+        <img src="../img/portfolio/forum_legion_square_after.png" alt="Legion Square Original" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: fill; display: block; pointer-events: none;">
+      </div>
+      
+      <div style="position: absolute; top: 0; bottom: 0; left: var(--slider-pos); width: 2px; background: rgba(255,255,255,0.9); pointer-events: none; transform: translateX(-50%); z-index: 3; box-shadow: 0 0 8px rgba(0,0,0,0.5);"></div>
+
+      <input type="range" min="0" max="100" value="50" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; z-index: 4;" 
+             oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+             
+    </div>
   </div>
   
   </div>
 </div>
 
+
+
+
 <br>
 
 !!! quote "GitHub Repository"
 
-    Check out more of my unlisted source codes and active script repositories directly [HERE](https://github.com).
+    - Check out more of my unlisted projects [HERE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding)!.
 
 
 
+
+
+
+!!! warning "Note"
+    
+      These highlights are just a small selection of the systems and environments I have developed over the past few years. If you are interested in a deeper technical breakdown or would like to see more of my work in action, feel free to visit my forum, check out my showcases on YouTube or contact me directly. I’m always open to discussing technical solutions and new projects.
 
 <br/><br/>
-
-Note:
-
-These highlights are just a small selection of the systems and environments I have developed over the past few years. If you are interested in a deeper technical breakdown or would like to see more of my work in action, feel free to visit my forum, check out my showcases on YouTube or contact me directly. I’m always open to discussing technical solutions and new projects.
