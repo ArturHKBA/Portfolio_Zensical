@@ -1,97 +1,86 @@
-/* Das Raster – jetzt mit optimaler Breite für ein ausgewogenes Layout */
-.custom-grid {
-  display: grid;
-  /* Mindestbreite um 50% von 275px auf 412px angehoben */
-  grid-template-columns: repeat(auto-fit, minmax(412px, 1fr));
-  gap: 1.75rem;
-  /* Leicht erhöhter Abstand passend zur neuen Größe */
-  padding: 1.5rem 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+/* ==========================================================================
+   8. MAJOR PROJECTS OVERVIEW CARDS (2x2 GRID, KEINE TOC-EINTRÄGE)
+   ========================================================================== */
+
+.era-grid .grid.cards>ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.75rem !important;
+  margin-top: 1.5rem !important;
+  padding: 0 !important;
 }
 
-/* Die Karten im transparenten Glassmorphismus-Look */
-.custom-card {
-  background-color: rgba(255, 255, 255, 0.03);
-
-  /* Der Unschärfe-Effekt für den Hintergrund */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  /* Subtiler, dünner Rahmen */
+.era-grid .grid.cards>ul>li {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 2rem;
-  /* Perfekter Innenabstand für diese Boxengröße */
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem !important;
+  margin: 0 !important;
   display: flex;
   flex-direction: column;
-  min-height: 190px;
-  box-sizing: border-box;
-
-  /* ERWEITERT: Outline dicker vordefiniert und Versatz erhöht, damit sie perfekt anliegt */
-  outline: 3.5px solid transparent;
-  outline-offset: -3.5px;
-
-  /* Flüssiger Übergang für alle Hintergrund-, Skalierungs- und Outline-Änderungen */
-  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, outline-color 0.25s ease;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-/* Eleganter Hover-Effekt: Karte wird größer und die rote, dicke Outline erscheint */
-.custom-card:hover {
-  background-color: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.15);
-
-  /* NEU: Karte flüssig um 4% vergrößern */
-  transform: scale(1.04);
-
-  /* Wechselt beim Hovern direkt und ohne Blitzen auf das Zensical-Dunkelrot */
-  outline-color: #8a1a24;
+.era-grid .grid.cards>ul>li:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.08), rgba(255, 255, 255, 0.025));
+  border-color: rgba(239, 68, 68, 0.55);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(239, 68, 68, 0.25);
 }
 
-/* Titel oben */
-.custom-card h3 {
-  margin: 0 0 0.85rem 0;
-  font-size: 1.15rem;
+/* Erster Absatz = Fetter Kartentitel mit Icon */
+.era-grid .grid.cards>ul>li>p:first-child {
+  margin: 0 0 0.45rem 0 !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Zweiter Absatz = Beschreibung */
+.era-grid .grid.cards>ul>li>p:nth-child(2) {
+  margin: 0 0 0.75rem 0 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.45 !important;
+  color: #94a3b8;
+}
+
+/* Letzter Absatz = Vollflächig klickbarer Link */
+.era-grid .grid.cards>ul>li>p:last-child {
+  margin: auto 0 0 0 !important;
+  padding-top: 0.15rem !important;
+}
+
+.era-grid .grid.cards>ul>li>p:last-child a {
+  color: #ef4444;
   font-weight: 600;
-  color: #ffffff;
-  line-height: 1.4;
-}
-
-/* Beschreibungstext */
-.card-text {
-  font-size: 0.95rem;
-  color: #a0aec0;
-  line-height: 1.55;
-  margin: 0 0 1.5rem 0;
-  flex-grow: 1;
-}
-
-/* Formatierung für Inline-Code */
-.inline-code {
-  background-color: rgba(255, 255, 255, 0.08);
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: monospace;
-  font-size: 0.9rem;
-  color: #e2e8f0;
-}
-
-/* Der "Learn More..." Link unten links */
-.card-link {
-  color: #718096;
+  font-size: 0.85rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  align-self: flex-start;
-  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.2s ease, color 0.2s ease;
 }
 
-.card-link:hover {
-  color: #a0aec0;
-  text-decoration: underline;
+.era-grid .grid.cards>ul>li>p:last-child a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-/* Sauberer Umbruch für schmale mobile Bildschirme */
-@media (max-width: 480px) {
-  .custom-grid {
-    grid-template-columns: 1fr;
+.era-grid .grid.cards>ul>li:hover>p:last-child a {
+  color: #f87171;
+  gap: 9px;
+}
+
+@media (max-width: 680px) {
+  .era-grid .grid.cards>ul {
+    grid-template-columns: 1fr !important;
   }
 }

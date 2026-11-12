@@ -37,286 +37,243 @@ icon: unity
     While my journey into game development began in 2014, it was in 2016 that I transitioned into the Unity Engine to bring my concepts to life. During this period, I developed an independent horror project, which served as a foundation for mastering C# scripting, simple enemy AI systems and interactive environment design. The following previews showcase my early work and reflect the beginning of my passion for the creative freedom found in game development, turning complex ideas into playable experiences.
 
 
-## Simple AI & Pathfinding:
+## Simple AI & Pathfinding
 
+!!! danger no-icon ":material-robot-outline: Enemy AI & NavMesh System"
 
-Implemented simple enemy AI utilizing Unity’s NavMesh system and custom waypoint scripting to create dynamic patrol and chase behaviors.
+    Implemented simple enemy AI utilizing Unity’s NavMesh system and custom waypoint scripting to create dynamic patrol and chase behaviors.
 
-<div class="grid" markdown>
-<div markdown>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Enemy Waypoints</span>
-Demonstrating the dynamic patrol routine between the custom waypoint scripts.
+    === ":material-map-marker-path: Enemy Waypoints"
 
-<video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 0.5em;">
-  <source src="../vid/Enemy_waypoints.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
+        Demonstrating the dynamic patrol routine between the custom waypoint scripts.
 
-<div markdown>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">NavMesh Preview</span>
-Visualizing the underlying Unity NavMesh calculation and pathfinding system in action.
+        <div class="media-wrapper">
+          <video controls>
+            <source src="../vid/Enemy_waypoints.mp4" type="video/mp4">
+          </video>
+        </div>
 
-<video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 0.5em;">
-  <source src="../vid/Navmesh_preview.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
-</div>
+    === ":material-vector-polygon: NavMesh Preview"
 
-??? example "Part of SimpleAiPatrol.ss | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/simpleai)!"
+        Visualizing the underlying Unity NavMesh calculation and pathfinding system in action.
 
-    ``` cs title="SimpleAiPatrol.ss" linenums="7"
-    public class SimpleAiPatrol : MonoBehaviour
-    {
-        private NavMeshAgent agent;
-        [SerializeField] private Vector3 firstPosOffset;
-        [SerializeField] private Vector3 secondPosOffset;
-        public enum AIState { Patrol, Attack, Idle}
-        public AIState currentAiState;
-        private FieldOfView fieldOfView;
-        [SerializeField] private float viewRadius = 15f;
-        [Range(0, 360)][SerializeField] private float viewAngle = 15f;
-        private bool idleStop = false;
-        private bool patrolMove = false;
-        [HideInInspector] public bool isAttacking = false;
-        private FaceObjectTowardPlayer faceTowardPlayer;
-        [SerializeField] private float stopDistanceFromPlayer = 10f;
-        private GegnerHealth gegnerHealth;
+        <div class="media-wrapper">
+          <video controls>
+            <source src="../vid/Navmesh_preview.mp4" type="video/mp4">
+          </video>
+        </div>
 
-        void Start()
+    ??? example ":material-code-braces: View Script Snippet (`SimpleAiPatrol.cs`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/simpleai)"
+
+        ```csharp title="SimpleAiPatrol.cs" linenums="7"
+        public class SimpleAiPatrol : MonoBehaviour
         {
-            gegnerHealth = GetComponent<GegnerHealth>();
-            faceTowardPlayer =GetComponentInChildren<FaceObjectTowardPlayer>();
-            isAttacking = false;
-            fieldOfView = GetComponent<FieldOfView>();
-            fieldOfView.viewRadius = viewRadius;    
-            fieldOfView.viewAngle = viewAngle;
+            private NavMeshAgent agent;
+            [SerializeField] private Vector3 firstPosOffset;
+            [SerializeField] private Vector3 secondPosOffset;
+            public enum AIState { Patrol, Attack, Idle}
+            public AIState currentAiState;
+            private FieldOfView fieldOfView;
+            [SerializeField] private float viewRadius = 15f;
+            [Range(0, 360)][SerializeField] private float viewAngle = 15f;
+            private bool idleStop = false;
+            private bool patrolMove = false;
+            [HideInInspector] public bool isAttacking = false;
+            private FaceObjectTowardPlayer faceTowardPlayer;
+            [SerializeField] private float stopDistanceFromPlayer = 10f;
+            private GegnerHealth gegnerHealth;
 
-            firstPosOffset = transform.position + firstPosOffset;
-            secondPosOffset = transform.position + secondPosOffset;
+            void Start()
+            {
+                gegnerHealth = GetComponent<GegnerHealth>();
+                faceTowardPlayer = GetComponentInChildren<FaceObjectTowardPlayer>();
+                isAttacking = false;
+                fieldOfView = GetComponent<FieldOfView>();
+                fieldOfView.viewRadius = viewRadius;    
+                fieldOfView.viewAngle = viewAngle;
 
-            agent = GetComponent<NavMeshAgent>();
+                firstPosOffset = transform.position + firstPosOffset;
+                secondPosOffset = transform.position + secondPosOffset;
 
+                agent = GetComponent<NavMeshAgent>();
+            }
+
+            void OnDrawGizmos()
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawWireSphere(transform.position, stopDistanceFromPlayer);
+            }
+
+            private void LateUpdate()
+            {
+                switch (currentAiState)
+                {
+                    case AIState.Patrol:
+                        Patrol();
+                        break;
+                    case AIState.Attack:
+                        Attack();
+                        break;
+                    case AIState.Idle:
+                        Idle();
+                        break;
+                }
+
+                if(gegnerHealth.gegnerGotHit)
+                {
+                    currentAiState = AIState.Attack;
+                }
+            }
+
+            private void Patrol()
+            {
+                if (!patrolMove)
+                {
+                    agent.SetDestination(firstPosOffset);
+                }
+                else
+                {
+                    agent.SetDestination(secondPosOffset);
+                }
+
+                if (Mathf.Abs(agent.nextPosition.z - firstPosOffset.z) <= 1 && Mathf.Abs(agent.nextPosition.x - firstPosOffset.x) <= 1)
+                {
+                    patrolMove = true;
+                }
+
+                if (Mathf.Abs(agent.nextPosition.z - secondPosOffset.z) <= 1 && Mathf.Abs(agent.nextPosition.x - secondPosOffset.x) <= 1)
+                {
+                    patrolMove = false;
+                }
+
+                SearchForPlayer();
+            }
         }
-        void OnDrawGizmos()
+        ```
+
+## Procedural VFX (Particle Systems)
+
+!!! danger no-icon ":material-shimmer: Particle Systems & Procedural Effects"
+
+    Exploration of collision-based particle logic and scripted asset behaviors for dynamic in-game visual feedback.
+
+    === ":material-water: Dynamic Blood-Splatter"
+
+        By utilizing collision detection within the Particle System, I ensured that every impact resulted in a unique visual output, avoiding repetitive "canned" animations.
+
+        <div class="media-wrapper">
+          <video controls>
+            <source src="../vid/Blood_particle.mp4" type="video/mp4">
+          </video>
+        </div>
+
+    === ":material-script-text-play: Asset Scripting"
+
+        Another scripted example using some assets to expand the procedural visual effect variety.
+
+        <div class="media-wrapper">
+          <iframe src="https://youtube.com" allowfullscreen></iframe>
+        </div>
+
+        <br>
+
+        **Gore Visuals & Particle Sheet:** High-resolution overview and inspectable detail showcase of the compiled custom gore particle sheet.
+
+        <div class="media-wrapper spoiler-card" onclick="this.classList.add('revealed'); this.querySelector('a').click();">
+          <a href="../img/portfolio/Gore.png" class="glightbox" style="display: block; width: 100%; height: 100%;" onclick="event.stopPropagation();">
+            <img src="../img/portfolio/Gore.png" alt="Gore Preview">
+          </a>
+          <div class="spoiler-overlay">
+            <span class="spoiler-title">:material-alert-outline: SPOILER: GORE CONTENT</span>
+            <span class="spoiler-desc">This preview contains potentially disturbing scenes or explicit gore depictions. Click here to reveal and inspect the full image.</span>
+          </div>
+        </div>
+
+
+
+## First-Person Animation
+
+!!! danger no-icon ":material-hand-back-right-outline: Fluid Viewmodel & Reload Mechanics"
+
+    I crafted a variety of animations, with a heavy focus on first-person movements. My goal was to move away from robotic motions and create a feel that’s fluid and immersive for the player.
+
+    <div class="media-wrapper">
+      <video controls>
+        <source src="../vid/Reload.mp4" type="video/mp4">
+      </video>
+    </div>
+
+## Immersive Gameplay Mechanics (Player States)
+
+!!! danger no-icon ":material-heart-pulse: Psychological Horror & Environmental Triggers"
+
+    Combining reactive player states with atmospheric level design to heighten tension through mechanical and visual feedback.
+
+    === ":material-waveform: Shock System"
+
+        I implemented a "Shock System" where entering specific trigger zones changes the player’s physical state (heavy breathing audio and increased camera/aim sway), enhancing psychological horror through mechanical feedback.
+
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/D7W4wC5KI78?si=8_Omy2p7tQU7ztnp" allowfullscreen></iframe>
+        </div>
+
+    === ":material-image-filter-hdr: Atmospheric Environment"
+
+        Overview of the atmospheric scene design and lighting setup used to construct the trigger zones for the player states.
+
+        <div class="media-wrapper">
+          <a href="../img/portfolio/Scene.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
+            <img src="../img/portfolio/Scene.png" alt="Scene Preview" style="object-fit: cover;">
+          </a>
+        </div>
+
+
+
+
+## Technical Optimization (Graphics Menu)
+
+!!! danger no-icon ":material-tune-variant: Scalable Graphics & Performance Settings"
+
+    Performance optimization is very important, which is why I also worked on a comprehensive settings menu allowing users to toggle graphic settings like Anti-aliasing, Texture quality, Shadow resolution, Shadow distance, Resolution, V-Sync, Anisotropic Filtering and more. This ensured scalability across both high-end and low-end hardware.
+
+    <div class="compare-slider">
+      <img src="../img/portfolio/Graphics_setting_high.png" alt="Very High Graphics">
+      <div class="compare-overlay">
+        <img src="../img/portfolio/Graphics_setting_low.png" alt="Very Low Graphics">
+      </div>
+      <div class="compare-line"></div>
+      <input type="range" min="0" max="100" value="50" oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+    </div>
+
+    ??? example no-icon ":material-code-braces: View Script Snippet (`FPSCount.cs`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io)"
+
+        ```csharp title="FPSCount.cs" linenums="41"
+        private void OnApplicationQuit()
         {
-            // Eine Grüne Kugel an der Position der "Transform"
-
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, stopDistanceFromPlayer);
-        }
-        private void LateUpdate()
-        {
-            switch (currentAiState)
+            if (totalUpdates > 1)
             {
-                case AIState.Patrol:
-                    Patrol();
-                    break;
-                case AIState.Attack:
-                    Attack();
-                    break;
-                case AIState.Idle:
-                    Idle();
-                    break;
-            }
-
-            if(gegnerHealth.gegnerGotHit)
-            {
-                currentAiState = AIState.Attack;
+                int final = totalFps / (totalUpdates - 1);
+                Debug.Log("Deine FPS: " + final);
             }
         }
-        private void Patrol()
-        {
-            // Patroliert zwischen Positionen A > B > C > A etc.
+        ```
 
-            if (!patrolMove)
-            {
-                // Das Ziel wird gesetzt
+## Cross-Platform Input Support
 
-                agent.SetDestination(firstPosOffset);
-            }
-            else
-            {
-                //Das Ziel wird gesetzt
+!!! danger no-icon ":material-controller-classic-outline: Unified Gamepad & Controller Prompts"
 
-                agent.SetDestination(secondPosOffset);
-            }
+    I built a flexible input system with full support for Xbox and DualShock controllers. My goal was to make sure playing on a PC feels just as smooth and responsive as playing on a console.
 
-            // Das Ziel findet sein Ende
+    <div class="media-wrapper">
+      <a href="../img/portfolio/Gamepad.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
+        <img src="../img/portfolio/Gamepad.png" alt="Cross-Platform Input Showcase" style="object-fit: cover;">
+      </a>
+    </div>
 
-            if (Mathf.Abs(agent.nextPosition.z - firstPosOffset.z) <= 1 && Mathf.Abs(agent.nextPosition.x - firstPosOffset.x) <= 1)
-            {
-                patrolMove = true;
-            }
-
-            if (Mathf.Abs(agent.nextPosition.z - secondPosOffset.z) <= 1 && Mathf.Abs(agent.nextPosition.x - secondPosOffset.x) <= 1)
-            {
-                patrolMove = false;
-            }
-
-
-            SearchForPlayer();
-        }
-    ``` 
-
-
-## Procedural VFX (Particle Systems):
-
-<div class="grid" markdown>
-<div style="display: flex; flex-direction: column; justify-content: space-between;" markdown>
-<div>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Dynamic Blood-Splatter</span>
-By utilizing collision detection within the Particle System, I ensured that every impact resulted in a unique visual output, avoiding repetitive "canned" animations.
-</div>
-
-<video controls style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: auto; padding-top: 0.5em;">
-  <source src="../vid/Blood_particle.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
-
-<div style="display: flex; flex-direction: column; justify-content: space-between;" markdown>
-<div>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Asset Scripting</span>
-Another scripted example using some assets to expand the procedural visual effect variety.
-</div>
-
-<iframe src="https://www.youtube.com/embed/7seLKmyWc58?si=K120UIK6M6zz_6_e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: auto; padding-top: 0.5em;"></iframe>
-</div>
-
-</div>
-
-
-<div class="grid" style="margin-top: 1.5em;" markdown>
-
-<div style="grid-column: span 2;" markdown>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Gore Visuals</span>
-High-resolution overview and inspectable detail showcase of the compiled custom gore particle sheet.
-
-<div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; margin-top: 0.5em; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" 
-     onclick="this.querySelector('.spoiler-overlay').style.display='none'; this.querySelector('img').style.filter='none'; this.querySelector('a').click();">
-  
-  <a href="../img/portfolio/Gore.png" class="glightbox" style="display: block;" onclick="event.stopPropagation();">
-    <img src="../img/portfolio/Gore.png" alt="Gore Preview" style="width: 100%; height: auto; filter: blur(25px); transition: filter 0.3s ease; cursor: pointer;">
-  </a>
-
-  <div class="spoiler-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; padding: 20px; text-align: center; cursor: pointer;">
-    <span style="font-size: 1.5em; margin-bottom: 8px;">⚠️ <strong>SPOILER: GORE CONTENT</strong></span>
-    <span style="font-size: 0.95em; max-width: 450px; opacity: 0.9;">Diese Karte enthält potenziell verstörende Szenen oder explizite Gewaltdarstellungen. Klicke hier, um das Bild direkt zu öffnen.</span>
-  </div>
-
-</div>
-</div>
-
-</div>
-
-
-
-## First-Person Animation:
-
-
-<div class="grid" markdown>
-<div style="grid-column: span 2;" markdown>
-I crafted a variety of animations, with a heavy focus on first-person movements. My goal was to move away from robotic motions and create a feel that’s fluid and immersive for the player.
-
-<video controls style="width: 100%; border-radius: 8px; background: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 0.5em;">
-  <source src="../vid/Reload.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
-
-</div>
-
-
-## Immersive Gameplay Mechanics (Player States):
-
-<div class="grid" markdown>
-
-<div style="display: flex; flex-direction: column; justify-content: space-between;">
-  <div>
-    <span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Shock System</span>
-    <p style="margin-bottom: 1em;">I implemented a "Shock System" where entering specific trigger zones changes the player’s physical state (heavy breathing audio and increased camera/aim sway), enhancing psychological horror through mechanical feedback.</p>
-  </div>
-  <iframe src="https://www.youtube.com/embed/D7W4wC5KI78?si=8_Omy2p7tQU7ztnp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: auto;"></iframe>
-</div>
-
-<div style="display: flex; flex-direction: column; justify-content: space-between;">
-  <div>
-    <span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Atmospheric Environment</span>
-    <p style="margin-bottom: 1em;">Overview of the atmospheric scene design and lighting setup used to construct the trigger zones for the player states.</p>
-  </div>
-  <a href="../img/portfolio/Scene.png" class="glightbox" style="width: 100%; aspect-ratio: 16/9; display: block; margin-top: auto;">
-    <img src="../img/portfolio/Scene.png" alt="Scene Preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer; display: block;">
-  </a>
-</div>
-
-</div>
-
-
-
-## Technical Optimization (Graphics Menu):
-
-<div class="grid" markdown>
-
-<div style="grid-column: span 2;" markdown>
-Performance optimization is very important, which is why I also worked on a comprehensive settings menu allowing users to toggle graphic settings like Anti-aliasing, Texture quality, Shadow resolution, Shadow distance, Resolution, V-Sync, Anisotropic Filtering and more. This ensured scalability across both high-end and low-end hardware.
-
-<!-- -Slider Container -->
-<div style="position: relative; width: 100%; padding-top: 48.828%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-top: 1.5em; user-select: none; --slider-pos: 50%;">
-  
-  <img src="../img/portfolio/Graphics_setting_high.png" alt="Very High Graphics" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: fill; display: block;">
-  
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: polygon(0 0, var(--slider-pos) 0, var(--slider-pos) 100%, 0 100%);">
-    <img src="../img/portfolio/Graphics_setting_low.png" alt="Very Low Graphics" style="width: 100%; height: 100%; object-fit: fill; display: block;">
-    <span style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; z-index: 2;">VERY LOW</span>
-  </div>
-  
-  <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; z-index: 2;">VERY HIGH</span>
-
-  <div class="slider-line" style="position: absolute; top: 0; bottom: 0; left: var(--slider-pos); width: 3px; background: #fff; pointer-events: none; transform: translateX(-50%); z-index: 3;"></div>
-
-  <input type="range" min="0" max="100" value="50" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; z-index: 4;" 
-         oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
-         
-</div>
-</div>
-</div>
-
-??? example "Part of FPSCount.ss | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io)!"
-
-    ``` cs title="FPSCount.cs" linenums="41"
-    private void OnApplicationQuit()
-      {
-        if (totalUpdates > 1)
-        {
-          int final = totalFps / (totalUpdates - 1);
-          Debug.Log("Deine FPS:"" = " + final);
-        }
-      }
-    }    
-    ```
-
-
-## Cross-Platform Input Support:
-
-
-<div class="grid" markdown>
-<div style="grid-column: span 2;" markdown>
-I built a flexible input system with full support for Xbox and DualShock controllers. My goal was to make sure playing on a PC feels just as smooth and responsive as playing on a console.
-
-<a href="../img/portfolio/Gamepad.png" class="glightbox" style="display: block; margin-top: 1em;">
-  <img src="../img/portfolio/Gamepad.png" alt="Cross-Platform Input Showcase" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer;">
-</a>
-
-<div style="margin-top: 1em; font-size: 0.9em; display: inline-flex; align-items: center; gap: 8px;">
-  <span style="font-weight: bold; color: var(--md-typeset-color, #fff);">Source Code:</span>
-  <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; border: 1px solid rgba(239, 68, 68, 0.3);">COMING SOON</span>
-</div>
-
-</div>
-
-</div>
+    <div class="status-row">
+      <span>:material-source-branch: Source Code:</span>
+      <span class="status-badge">COMING SOON</span>
+    </div>
 
 !!! warning "Note"
     

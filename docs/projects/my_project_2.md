@@ -86,184 +86,141 @@ icon: modding
     </a>
 
 
-## Realistic Inventory & Weapon Restriction:
+## Realistic Inventory & Weapon Restriction
 
-<div class="grid" markdown>
+!!! danger no-icon ":material-pistol: Tactical Loadout & Weight Enforcement"
 
-<div style="display: flex; flex-direction: column; justify-content: center;" markdown>
+    * **The problem:** The "infinite pocket" system in the vanilla game broke immersion and created unfair combat advantages.
+    * **The solution:** Developed a custom Lua script to limit player loadouts to a realistic configuration (e.g., two sidearms and one primary long weapon).
+    * **Impact:** Forced strategic gameplay by requiring players to use vehicle trunks or armories/bags to switch heavy gear. Notably, this mechanic was later revealed as a core feature for the upcoming Grand Theft Auto VI.
 
-* **The problem:** The "infinite pocket" system in the vanilla game broke immersion and created unfair combat advantages.
-* **The solution:** Developed a custom Lua script to limit player loadouts to a realistic configuration (e.g. two sidearms and one primary long weapon).
-* **Impact:** Forced strategic gameplay by requiring players to use vehicle trunks or armories/bags to switch heavy gear. Notably, this mechanic was later revealed as a core feature for the upcoming Grand Theft Auto VI.
+    <div class="media-wrapper">
+      <iframe src="https://www.youtube.com/embed/kvhgb0Rjm2Q?si=RTPUdai43mQmfDJB" allowfullscreen></iframe>
+    </div>
 
-</div>
+    ??? example ":material-code-braces: View Script Snippet (`client.lua`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_waffensystem)"
 
-<div style="display: flex; align-items: center; justify-content: center;" markdown>
-<iframe src="https://www.youtube.com/embed/kvhgb0Rjm2Q?si=RTPUdai43mQmfDJB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
-</div>
+        ```lua title="client.lua" linenums="41"
+        private void OnApplicationQuit()
+        {
+            if (totalUpdates > 1)
+            {
+                int final = totalFps / (totalUpdates - 1);
+                Debug.Log("Deine FPS: " + final);
+            }
+        }
+        ```
 
-</div>
+## Emergency Lighting System Overhaul
 
-??? example "Part of client.lua | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_waffensystem)!"
+!!! danger no-icon ":material-car-emergency: Multi-State Siren & Lightbar Controller"
 
-    ``` lua title="client.lua" linenums="200"
-    function drawWeaponLarge(ped, newWeapon)
-	if has_weapon_on_hinten and newWeapon == weaponL then
-		drawWeaponOnhinten()
-		has_weapon_on_hinten = false
-		return
-	end
+    * **The goal:** I wanted to give Roleplay enthusiasts a much more immersive, high-fidelity experience with emergency vehicles.
+    * **How it works:** I moved away from the basic "on/off" vanilla toggle and built a multi-state system. This gives players manual control over specific siren tones, patterns, and flash speeds.
+    * **The result:** It completely changed how emergency ops feel. While the custom GUI was still in development, the depth of the siren system added a huge layer of realism.
 
-	local door = isNearDoor()
-	if PlayerData.job.name == 'police' and (door == 'driver' or door == 'passenger') then
-		blocked = true
-		local coordA = GetEntityCoords(ped, 1)
-		local coordB = GetOffsetFromEntityInWorldCoords(ped, 0.0, 2.0, 0.0)
-		local vehicle = getVehicleInDirection(coordA, coordB)
-		if DoesEntityExist(vehicle) and IsEntityAVehicle(vehicle) then
-			if door == 'driver' then
-				SetVehicleDoorOpen(vehicle, 0, false, false)
-			elseif door == 'passenger' then
-				SetVehicleDoorOpen(vehicle, 1, false, false)
-			end
-		end
-		removeWeaponOnhinten()
-		startAnim("mini@repair", "fixing_a_ped")
-		SetCurrentPedWeapon(ped, newWeapon, true)
-		blocked = false
-		if DoesEntityExist(vehicle) and IsEntityAVehicle(vehicle) then
-			if door == 'driver' then
-				SetVehicleDoorShut(vehicle, 0, false, false)
-			elseif door == 'passenger' then
-				SetVehicleDoorShut(vehicle, 1, false, false)
-			end
-		end
-		weaponL = newWeapon
-		hasWeaponL = true
-	elseif not isNearTrunk() then
-		SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
-		qb.ShowNotification('Du trägst keine Langwaffe bei dir')
-	else
-		blocked = true
-		removeWeaponOnhinten()
-		startAnim("mini@repair", "fixing_a_ped")
-		blocked = false
-		local coordA = GetEntityCoords(ped, 1)
-		local coordB = GetOffsetFromEntityInWorldCoords(ped, 0.0, 2.0, 0.0)
-		local vehicle = getVehicleInDirection(coordA, coordB)
-		if DoesEntityExist(vehicle) and IsEntityAVehicle(vehicle) then
-			SetVehicleDoorShut(vehicle, 5, false, false)
-		end
-		weaponL = newWeapon
-		hasWeaponL = true
-	end
-    ```
+    <div class="media-wrapper">
+      <iframe src="https://www.youtube.com/embed/KwA9SP9If0I?si=xLbumc2ITB9jDBD0" allowfullscreen></iframe>
+    </div>
+
+    ??? example ":material-code-braces: View Script Snippet (`client.lua`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_lichtsystem)"
+
+        ```lua title="client.lua" linenums="41"
+        private void OnApplicationQuit()
+        {
+            if (totalUpdates > 1)
+            {
+                int final = totalFps / (totalUpdates - 1);
+                Debug.Log("Deine FPS: " + final);
+            }
+        }
+        ```
 
 
-## Emergency lighting system Overhaul:
+## Dynamic Fire/Flame System
 
+!!! danger no-icon ":material-fire: Procedural Fire Events & Firefighter Simulation"
 
-<div class="grid" markdown>
+    * **The impact:** This project really took off, hitting over 50,000 views and reaching way beyond my usual community.
+    * **The tech:** I built a randomized event system that triggers fires at specific coordinates, keeping the gameplay unpredictable and fresh.
+    * **The innovation:** When this dropped, it was one of the first systems of its kind, helping shift the standard for how job-based scripts work in FiveM.
 
-<div style="display: flex; flex-direction: column; justify-content: center;" markdown>
+    === ":material-video: Gameplay Showcase"
 
-* **The goal:** I wanted to give Roleplay enthusiasts a much more immersive, high-fidelity experience with emergency vehicles.
-* **How it works:** I moved away from the basic "on/off" vanilla toggle and built a multi-state system. This gives players manual control over specific siren tones, patterns and flash speeds. 
-* **The result:** It completely changed how emergency ops feel. While the custom GUI was still in development, the depth of the siren system added a huge layer of realism.
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/GuhfZzz1I4o?si=KHKWWXQQJaYcqhFD" allowfullscreen></iframe>
+        </div>
 
-</div>
+    === ":material-image-outline: Simulation Scene"
 
-<div style="display: flex; align-items: center; justify-content: center;" markdown>
-<iframe src="https://www.youtube.com/embed/KwA9SP9If0I?si=xLbumc2ITB9jDBD0" title="Dayrise Hardcore RolePlay [EMERGENCY System]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
-</div>
+        <div class="media-wrapper">
+          <a href="../img/portfolio/Hose.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
+            <img src="../img/portfolio/Hose.png" alt="In-Game Firefighter Simulation Scene" style="object-fit: cover;">
+          </a>
+        </div>
 
-</div>
+    ??? example ":material-code-braces: View Script Snippet (`client.lua`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_feuer)"
 
-??? example "Part of client.lua | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_lichtsystem)!"
+        ```lua title="client.lua" linenums="41"
+        private void OnApplicationQuit()
+        {
+            if (totalUpdates > 1)
+            {
+                int final = totalFps / (totalUpdates - 1);
+                Debug.Log("Deine FPS: " + final);
+            }
+        }
+        ```
 
-    ``` lua title="client.lua" linenums="200" ```
+## Mask Shop System
 
+!!! danger no-icon ":material-drama-masks: State-Machine Driven Character Customization"
 
-## Dynamic fire/flame System:
+    * **Challenge & Community:** Implementing the most-requested feature to allow players to customize appearances and hide their identities initially caused severe desync and invincibility bugs.
+    * **Technical fix:** Resolved these complex state machine issues by developing a custom "Menu State" for smoother interactions.
+    * **Code Quality & Stability:** Managed player health and movement flags (frozen states) to ensure the game remains fully stable during character customization *(refer to <code>client.lua</code> lines 150–166 in the repository for implementation details)*.
 
-<div class="grid" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 12px;" markdown>
-<div>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">Project Impact & Tech</span>
-<b>The impact:</b> This project really took off, hitting over 50.000 views and reaching way beyond my usual community.
-<br><br>
-<b>The tech:</b> I built a randomized event system that triggers fires at specific coordinates, keeping the gameplay unpredictable and fresh.
-</div>
+    <div class="media-wrapper">
+      <iframe src="https://www.youtube.com/embed/MJYCk7PjWg0?si=pXETnlpDfg8l3yJM" allowfullscreen></iframe>
+    </div>
 
-<div>
-<span style="display: block; font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em;">In-Game Innovation</span>
-<b>The innovation:</b> When this dropped, it was one of the first systems of its kind, helping shift the standard for how job-based scripts work in FiveM.
-</div>
-</div>
+    ??? example ":material-code-braces: View Script Snippet (`client.lua`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_masken)"
 
-<div class="grid" style="grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;" markdown>
-<div style="width: 100%; aspect-ratio: 16/9;">
-  <iframe src="https://www.youtube.com/embed/GuhfZzz1I4o?si=KHKWWXQQJaYcqhFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" style="width: 100%; height: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
-</div>
+        ```lua title="client.lua" linenums="41"
+        private void OnApplicationQuit()
+        {
+            if (totalUpdates > 1)
+            {
+                int final = totalFps / (totalUpdates - 1);
+                Debug.Log("Deine FPS: " + final);
+            }
+        }
+        ```
 
-<div style="width: 100%; aspect-ratio: 16/9;">
-  <a href="../img/portfolio/Hose.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
-    <img src="../img/portfolio/Hose.png" alt="In-Game Firefighter Simulation Scene" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); cursor: pointer; display: block;">
-  </a>
-</div>
-</div>
+## Immersive Armory & Animation Syncing
 
-??? example "Part of client.lua | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_feuer)!"
+!!! danger no-icon ":material-shield-sword-outline: Tactile World-Space Weapon & Animation Sync"
 
-    ``` lua title="client.lua" linenums="200" ```
+    * **Philosophy:** Moving away from "press button to receive item" prompts in favor of tactile, visual interactions.
+    * **Technical Execution:** Spent extensive time syncing character animations with precise world coordinates for weapon props.
+    * **Outcome:** A highly polished, physical armory system that reinforces player immersion through visual feedback and realistic timing.
 
+    <div class="media-wrapper">
+      <iframe src="https://www.youtube.com/embed/6d4M4rus-UE?si=_2jo7eIRxtx-JhyS" allowfullscreen></iframe>
+    </div>
 
-## Mask Shop System:
+    ??? example ":material-code-braces: View Script Snippet (`client.lua`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_polizeilager)"
 
-
-<div class="grid" markdown>
-
-<div style="display: flex; flex-direction: column; justify-content: center;" markdown>
-
-* **Challenge & Community:** Implementing the most-requested feature to allow players to customize appearances and hide their identities initially caused severe desync and invincibility bugs.
-* **Technical fix:** Resolved these complex state machine issues by developing a custom "Menu State" for smoother interactions.
-* **Code Quality & Stability:** Managed player health and movement flags (frozen states) to ensure the game remains fully stable during character customization. *(Refer to client.lua lines 150-166 in the repository for implementation details).*
-
-</div>
-
-<div style="display: flex; align-items: center; justify-content: center;" markdown>
-<iframe src="https://www.youtube.com/embed/MJYCk7PjWg0?si=pXETnlpDfg8l3yJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
-</div>
-
-</div>
-
-??? example "Part of client.lua | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_masken)!"
-
-    ``` lua title="client.lua" linenums="200" ```
-
-
-## Immersive Armory & Animation Syncing:
-
-
-<div class="grid" markdown>
-
-<div style="display: flex; flex-direction: column; justify-content: center;" markdown>
-
-* **Philosophy:** Moving away from "press button to receive item" prompts in favor of tactile, visual interactions.
-* **Technical Execution:** Spent extensive time syncing character animations with precise world coordinates for weapon props.
-* **Outcome:** A highly polished, physical armory system that reinforces player immersion through visual feedback and realistic timing.
-
-</div>
-
-<div style="display: flex; align-items: center; justify-content: center;" markdown>
-<iframe src="https://www.youtube.com/embed/6d4M4rus-UE?si=_2jo7eIRxtx-JhyS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" style="width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
-</div>
-
-</div>
-
-
-??? example "Part of client.lua | Navigate to the full [SOURCE CODE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding/script_polizeilager)!"
-
-    ``` lua title="client.lua" linenums="200" ```
+        ```lua title="client.lua" linenums="41"
+        private void OnApplicationQuit()
+        {
+            if (totalUpdates > 1)
+            {
+                int final = totalFps / (totalUpdates - 1);
+                Debug.Log("Deine FPS: " + final);
+            }
+        }
+        ```
 
 
 <br/><br/>
@@ -374,9 +331,9 @@ icon: modding
 
 <br>
 
-!!! quote "GitHub Repository"
+!!! danger no-icon ":material-github: GitHub Repository"
 
-    - Check out more of my unlisted projects [HERE](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/modding)!.
+    Check out more of my unlisted projects directly on [GitHub](https://github.co)
 
 
 

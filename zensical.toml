@@ -10,6 +10,15 @@ extra_css = [
   "stylesheets/feedback.css",
   "stylesheets/projects.css",
   "stylesheets/tools.css",
+  "stylesheets/uhrzeit.css",
+  "stylesheets/musik.css",
+  "stylesheets/location.css",
+]
+
+extra_javascript = [
+  "javascript/uhrzeit.js",
+  "javascript/musik.js",
+  "javascript/location.js",
 ]
 copyright = """
   Copyright &copy; 2026 Artur LLC –

@@ -1,49 +1,27 @@
-/* :root  > * {
-  --md-primary-fg-color:        #430fee;
-  --md-primary-fg-color--light: #484343;
-  --md-primary-fg-color--dark:  #b7ff00; 
-}
-
-[data-md-color-scheme="slate"] {
-  --md-hue: 210; 
-} /*
-
-
 /* ==========================================================================
-   MAJOR PROJECTS DYNAMISCH STEUERN (REPARIERT FÜR ORDNER 'projects')
+   1. NAVIGATION & DYNAMISCHE TABS ('projects' Ordner)
    ========================================================================== */
 
-/* 1. Im Normalzustand (z. B. auf der Startseite) Major Projects überall ausblenden */
 .md-tabs__list .md-tabs__item:has(a[href*="projects"]),
 .md-nav--primary>.md-nav__list>.md-nav__item:has(a[href*="projects"]) {
   display: none !important;
 }
 
-/* 2. Sobald eine Seite AUS DEM ORDNER 'projects' aktiv geöffnet wird,
-   blenden wir den oberen Tab UND die linke Menüliste sofort ein */
 .md-tabs__list .md-tabs__item--active:has(a[href*="projects"]),
 .md-nav--primary>.md-nav__list>.md-nav__item--active:has(a[href*="projects"]),
 .md-nav__item--active .md-nav__list .md-nav__item {
   display: inline-block !important;
 }
 
-/* Spezifisch für die linke Navigation als Block-Element auf der Unterseite */
 .md-nav--primary>.md-nav__list>.md-nav__item--active:has(a[href*="projects"]) {
   display: block !important;
 }
 
 
-
-
-
-
-
-
 /* ==========================================================================
-   GLOBAL & HEADER STYLING
+   2. GLOBAL HEADER, OVERVIEW & TECH-STACK BADGES
    ========================================================================== */
 
-/* Globale Absicherung für Abstände und responsive Berechnung */
 .project-subtitle,
 .project-intro,
 .tech-stack-container,
@@ -52,33 +30,33 @@
   box-sizing: border-box;
 }
 
-/* Kleinerer Titel/Zeitraum ganz oben */
+.project-subtitle,
+.project-intro,
+.tech-stack-title,
+.tech-badge,
+.overview-section h3,
+.overview-section p,
+.btn-primary-nav {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 .project-subtitle {
   font-size: 1.1rem;
   color: #8e8e93;
   margin-bottom: 0.75rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Einleitende Kurzbeschreibung */
 .project-intro {
   font-size: 1.2rem;
   color: #ffffff;
   font-weight: 500;
   margin-bottom: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ==========================================================================
-   TECH STACK BADGES (NIKE REDESIGN STYLE)
-   ========================================================================== */
-
-/* Container für die Tech-Stack-Sektion */
 .tech-stack-container {
   margin-bottom: 2rem;
 }
 
-/* Kleiner, moderner Tech-Stack-Titel in Großbuchstaben */
 .tech-stack-title {
   font-size: 0.95rem;
   color: #8e8e93;
@@ -86,17 +64,14 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Flexbox für die saubere Anordnung der Boxen nebeneinander */
 .tech-stack-flex {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-/* Filigrane, eckige Boxen für die einzelnen Technologien */
 .tech-badge {
   background-color: #111112;
   border: 1px solid #222224;
@@ -108,65 +83,51 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Subtiler Hover-Effekt für die Tech-Badges */
 .tech-badge:hover {
   border-color: #3f3f46;
   background-color: #18181b;
 }
 
-/* Bild-Icons (.svg / .png) aus deinem Ordner sauber skalieren */
 .tech-icon {
   width: 14px;
   height: 14px;
   display: inline-block;
   flex-shrink: 0;
   object-fit: contain;
-  /* Verhindert das Verzerren der Grafiken */
 }
 
-/* ==========================================================================
-   OVERVIEW & SEPARATOR
-   ========================================================================== */
-
-/* Dezente, dunkle Trennlinie nach dem Tech-Stack */
 .project-divider {
   border: 0;
   border-top: 1px solid #1c1c1e;
   margin: 2rem 0;
 }
 
-/* Überschrift der Overview-Sektion */
 .overview-section h3 {
   font-size: 1.1rem;
   color: #8e8e93;
   margin-bottom: 1rem;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Fließtext der Projektübersicht */
 .overview-section p {
   color: #e1e1e6;
   line-height: 1.6;
   font-size: 1.05rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+
 /* ==========================================================================
-   INTERACTIVE BUTTON
+   3. BUTTONS & STATUS-BADGES
    ========================================================================== */
 
-/* Positionierungs-Container */
 .navigation-container {
   margin-top: 3rem;
   display: flex;
 }
 
-/* Der voll interaktive, lila Haupt-Button */
 .btn-primary-nav {
   background-color: #6b21a8;
   color: #ffffff !important;
@@ -180,26 +141,357 @@
   gap: 8px;
   cursor: pointer;
   border: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Flüssiger Übergang für Hover- und Klickeffekte */
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover-Zustand (Maus bewegt sich auf den Button) */
 .btn-primary-nav:hover {
   background-color: #7c3aed;
-  /* Wechselt zu einem helleren Violett */
   transform: translateY(-2px);
-  /* Hebt den Button minimal an */
   box-shadow: 0 6px 12px rgba(124, 58, 237, 0.25);
-  /* Erzeugt einen mitleuchtenden Schatten */
 }
 
-/* Active-Zustand (Beim Herunterdrücken mit der Maus) */
 .btn-primary-nav:active {
   transform: translateY(0);
-  /* Drückt den Button optisch wieder nach unten */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-row {
+  margin-top: 12px;
+  font-size: 0.85em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.status-badge {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85em;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+
+/* ==========================================================================
+   4. ADMONITIONS & GRID CARDS
+   ========================================================================== */
+
+.md-typeset .admonition.no-icon>.admonition-title::before,
+.md-typeset .admonition.no-icon>summary::before {
+  display: none;
+}
+
+.md-typeset .admonition.no-icon>.admonition-title,
+.md-typeset .admonition.no-icon>summary {
+  padding-left: 0.75rem;
+}
+
+.md-typeset .grid.cards>ul>li {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.md-typeset .grid.cards>ul>li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ==========================================================================
+   5. MEDIA-CONTAINER (VIDEOS, IFRAMES, BILDER) & SPOILER
+   ========================================================================== */
+
+.media-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.media-wrapper iframe,
+.media-wrapper img,
+.media-wrapper video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.media-wrapper img {
+  object-fit: contain;
+}
+
+.media-wrapper video {
+  object-fit: cover;
+  background: #000;
+}
+
+.spoiler-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.spoiler-card img {
+  filter: blur(25px);
+  transition: filter 0.3s ease;
+}
+
+.spoiler-card.revealed img {
+  filter: none;
+}
+
+.spoiler-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  gap: 8px;
+}
+
+.spoiler-card.revealed .spoiler-overlay {
+  display: none;
+}
+
+.spoiler-title {
+  font-size: 1.25em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spoiler-desc {
+  font-size: 0.9em;
+  max-width: 460px;
+  opacity: 0.9;
+}
+
+
+/* ==========================================================================
+   6. VORHER / NACHHER COMPARISON-SLIDER
+   ========================================================================== */
+
+.slider-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+  width: 100%;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .slider-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Gemeinsame Basis für fixe und automatische Slider */
+.compare-slider,
+.compare-slider-auto {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  user-select: none;
+  --slider-pos: 50%;
+}
+
+.compare-slider {
+  padding-top: 48.828%;
+  margin-top: 12px;
+}
+
+.compare-slider img,
+.compare-slider-auto .compare-overlay img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: fill;
+  display: block;
+  pointer-events: none;
+}
+
+.compare-slider-auto>img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  pointer-events: none;
+}
+
+/* Höhenangleichung des rechten IK-Sliders an das linke Bild */
+.compare-slider-auto:last-child {
+  aspect-ratio: 1 / 1.03;
+}
+
+.compare-slider-auto:last-child>img,
+.compare-slider-auto:last-child .compare-overlay img {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.compare-overlay {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, var(--slider-pos) 0, var(--slider-pos) 100%, 0 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.compare-overlay-right {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(var(--slider-pos) 0, 100% 0, 100% 100%, var(--slider-pos) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.compare-label {
+  position: absolute;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.compare-label.left {
+  left: 10px;
+}
+
+.compare-label.right {
+  right: 10px;
+}
+
+.compare-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--slider-pos);
+  width: 2px;
+  background: #fff;
+  pointer-events: none;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.compare-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.compare-slider input[type="range"],
+.compare-slider-auto input[type="range"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  margin: 0;
+  z-index: 4;
+}
+
+
+/* ==========================================================================
+   7. INTERACTIVE STAGE VIEWER (HDRP BACKROOMS)
+   ========================================================================== */
+
+.stage-viewer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stage-viewer img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.stage-viewer[data-active="1"] img[data-stage="1"],
+.stage-viewer[data-active="2"] img[data-stage="2"],
+.stage-viewer[data-active="3"] img[data-stage="3"] {
+  opacity: 1;
+}
+
+.stage-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.stage-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.stage-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.stage-btn.active {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #fff;
 }

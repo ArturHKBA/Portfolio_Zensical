@@ -52,28 +52,28 @@ icon: blender
 
 ## School Project with international feedback
 
-!!! info "Project Showcases & Validation"
+!!! danger no-icon "Project Showcases & Validation"
 
     To validate the project, I distributed the playable demo to an international group of testers for comprehensive feedback. Below, you can toggle through the demo highlights, visual concepts, and tester insights.
 
-    === "🎬 School Project"
+    === ":material-movie-open: School Project"
 
-        <div style="margin-top: 12px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05);">
-          <object data="https://www.youtube.com/embed/8ZXlZ9BjeFs?si=E9G5BWgcRMUjwGpt" style="width: 100%; aspect-ratio: 16/9; display: block;"></object>
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/8ZXlZ9BjeFs?si=E9G5BWgcRMUjwGpt" allowfullscreen></iframe>
         </div>
 
-    === "📸 Concept Preview"
+    === ":material-image-outline: Concept Preview"
 
-        <div style="width: 100%; aspect-ratio: 16/9; margin-top: 12px; background: rgba(0, 0, 0, 0.2); border-radius: 6px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05);">
+        <div class="media-wrapper">
           <a href="../img/portfolio/Horse_preview.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
-            <img src="../img/portfolio/Horse_preview.png" alt="Horse Preview Concept Art" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            <img src="../img/portfolio/Horse_preview.png" alt="Horse Preview Concept Art">
           </a>
         </div>
 
-    === "🗣️ Tester Feedback"
+    === ":material-account-voice: Tester Feedback"
 
-        <div style="margin-top: 12px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05);">
-          <object data="https://www.youtube.com/embed/rxMbD1j6Wq4?si=dhbv4CtgpaOGfr4k" style="width: 100%; aspect-ratio: 16/9; display: block;"></object>
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/rxMbD1j6Wq4?si=dhbv4CtgpaOGfr4k" allowfullscreen></iframe>
         </div>
 
 
@@ -119,23 +119,45 @@ icon: blender
 
 
 
-## Extra Additions:
-#### First
 
-- In addition to the core project, I developed a concept for vehicle wheel deformation. Although this feature was not integrated into the final demo for the showcase, it represents a significant technical milestone in my exploration of physics-based mechanics. You can view the technical demonstration in the video below:
+## Extra Additions
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SycE8ZyFlnA?si=PEhuYCbG2I11AEeO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+!!! danger no-icon ":material-tire: Vehicle Wheel Deformation (Physics R&D)"
 
-![BILD](/assets/pictures/Deformation.png)
-![BILD](/assets/pictures/Deformation2.png)
+    In addition to the core project, I developed a concept for vehicle wheel deformation. Although this feature was not integrated into the final demo for the showcase, it represents a significant technical milestone in my exploration of physics-based mechanics.
+
+    === ":material-video: Technical Demo"
+
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/SycE8ZyFlnA?si=PEhuYCbG2I11AEeO" allowfullscreen></iframe>
+        </div>
+
+    === ":material-image-multiple: Mesh & Physics Screenshots"
+
+        <div class="grid cards" markdown>
+
+        -   [![Wheel Deformation Setup](../img/portfolio/Deformation.png)](../img/portfolio/Deformation.png){ .glightbox }
+
+        -   [![Tire Compression Test](../img/portfolio/Deformation2.png)](../img/portfolio/Deformation2.png){ .glightbox }
+
+        </div>
+
+!!! danger no-icon ":material-axe: Advanced Tree-Chopping & Particle System"
+
+    I took the basic demo mechanics and leveled up the tree-chopping system. I linked it to a proper inventory and added advanced particle effects, including environment-aware collisions. This was a direct evolution of the dynamic blood splatter logic I built for my previous horror project in 2019.
+
+    <div class="media-wrapper">
+      <iframe src="https://www.youtube.com/embed/pdudZyNDIB8?si=Ps6UwEXumkDe6vC9" allowfullscreen></iframe>
+    </div>
+
+
+
+
+
 
 [Source code](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/deformation)
 
 
-#### second
-- I took the basic demo mechanics and leveled up the tree-chopping system. I linked it to a proper inventory and added advanced particle effects, including environment-aware collisions. This was a direct evolution of the dynamic blood splatter logic I built for my previous horror project in 2019.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pdudZyNDIB8?si=Ps6UwEXumkDe6vC9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
@@ -152,133 +174,126 @@ icon: blender
 
 
 
+## Inverse Kinematics
+
+!!! danger no-icon ":material-shoe-print: Procedural Foot Placement & Terrain Adaptation"
+
+    In many third-person and full-body FPS games, walking on stairs or uneven terrain often leads to floating or clipping feet. While often just a visual glitch, it can actually break locomotion if the offset is too high. Instead of asking animators for hundreds of edge-case animations—which limits level design—I developed a procedural IK (Inverse Kinematics) system. Using real-time ray-scanning, the system dynamically adjusts foot placement to keep movement grounded and fluid, regardless of the terrain.
+
+    === ":material-compare-horizontal: Before & After Comparisons"
+
+        <div class="slider-grid">
+          <div class="compare-slider-auto">
+            <img src="../img/portfolio/IK.png" alt="IK System Enabled 1">
+            <div class="compare-overlay-right">
+              <span class="compare-label right">IK ON</span>
+            </div>
+            <div class="compare-overlay">
+              <img src="../img/portfolio/IK2.png" alt="IK System Disabled 1">
+              <span class="compare-label left">IK OFF</span>
+            </div>
+            <div class="compare-line"></div>
+            <input type="range" min="0" max="100" value="50" oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+          </div>
+          <div class="compare-slider-auto">
+            <img src="../img/portfolio/IK3.png" alt="IK System Enabled 2">
+            <div class="compare-overlay-right">
+              <span class="compare-label right">IK ON</span>
+            </div>
+            <div class="compare-overlay">
+              <img src="../img/portfolio/IK4.png" alt="IK System Disabled 2">
+              <span class="compare-label left">IK OFF</span>
+            </div>
+            <div class="compare-line"></div>
+            <input type="range" min="0" max="100" value="50" oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+          </div>
+        </div>
 
 
 
-## Inverse Kinematics:
 
-- In many third person and full-body FPS games, walking on stairs or uneven terrain often leads to floating or clipping feet. While often just a visual glitch, it can actually break locomotion if the offset is too high. Instead of asking animators for hundreds of edge-case animations, which limits level design I developed a procedural IK (Inverse Kinematics) system. Using ray-scanning, the system dynamically adjusts foot placement in real-time to keep movement grounded and fluid, regardless of the terrain.
+    === ":material-walk: Locomotion Preview"
 
-Before & After Comparisons + result:
+        <div class="media-wrapper">
+          <video controls>
+            <source src="../vid/IK_Preview.mp4" type="video/mp4">
+          </video>
+        </div>
 
-![BILD](/assets/pictures/IK2.png)
-![BILD](/assets/pictures/IK.png)
-![BILD](/assets/pictures/IK4.png)
-![BILD](/assets/pictures/IK3.png)
+    === ":material-robot-outline: AI Terrain Adaptation"
 
+        <div class="media-wrapper">
+          <video controls>
+            <source src="../vid/IK_AI.mp4" type="video/mp4">
+          </video>
+        </div>
 
-## Inverse Kinematics:
+    === ":material-lightbulb-on-outline: Technical Reference"
 
-In many third person and full-body FPS games, walking on stairs or uneven terrain often leads to floating or clipping feet. While often just a visual glitch, it can actually break locomotion if the offset is too high. 
+        My approach to this system was significantly influenced by this specific demonstration, which guided my development of the ray-scanning logic:
 
-Instead of asking animators for hundreds of edge-case animations, which limits level design, I developed a procedural IK (Inverse Kinematics) system. Using ray-scanning, the system dynamically adjusts foot placement in real-time to keep movement grounded and fluid, regardless of the terrain.
+        <div class="media-wrapper">
+          <iframe src="https://www.youtube.com/embed/PryJ3CpHcXQ?si=KaBuUx3wL3ZQ3H1T" allowfullscreen></iframe>
+        </div>
 
-### Before & After Comparisons + result:
-
-<div style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 20px; margin-bottom: 24px;">
-
-  <!-- Slider 1 (Links) -->
-  <div style="flex: 1 1 400px; min-width: 300px;">
-    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.2); user-select: none; --slider-pos: 50%;">
-      
-      <!-- Nachher-Bild 1 (Hintergrund) -->
-      <img src="../img/portfolio/IK.png" alt="IK System Enabled 1" style="width: 100%; height: auto; display: block; pointer-events: none;">
-      
-      <!-- Vorher-Bild 1 (Vordergrund) -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: polygon(0 0, var(--slider-pos) 0, var(--slider-pos) 100%, 0 100%);">
-        <img src="../img/portfolio/IK2.png" alt="IK System Disabled 1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: fill; display: block; pointer-events: none;">
-      </div>
-      
-      <!-- Trennlinie 1 -->
-      <div style="position: absolute; top: 0; bottom: 0; left: var(--slider-pos); width: 2px; background: rgba(255,255,255,0.9); pointer-events: none; transform: translateX(-50%); z-index: 3; box-shadow: 0 0 8px rgba(0,0,0,0.5);"></div>
-
-      <!-- Slider Input 1 -->
-      <input type="range" min="0" max="100" value="50" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; z-index: 4;" 
-             oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+    <div class="status-row">
+      <span>:material-github: <a href="https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/inversekinematics" target="_blank">Inspect Full Source Code (C# Scripts)</a></span>
     </div>
-  </div>
 
-  <!-- Slider 2 (Rechts) -->
-  <div style="flex: 1 1 400px; min-width: 300px;">
-    <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.2); user-select: none; --slider-pos: 50%;">
-      
-      <!-- Nachher-Bild 2 (Hintergrund) -->
-      <img src="../img/portfolio/IK_after2.png" alt="IK System Enabled 2" style="width: 100%; height: auto; display: block; pointer-events: none;">
-      
-      <!-- Vorher-Bild 2 (Vordergrund) -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: polygon(0 0, var(--slider-pos) 0, var(--slider-pos) 100%, 0 100%);">
-        <img src="../img/portfolio/IK_before2.png" alt="IK System Disabled 2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: fill; display: block; pointer-events: none;">
-      </div>
-      
-      <!-- Trennlinie 2 -->
-      <div style="position: absolute; top: 0; bottom: 0; left: var(--slider-pos); width: 2px; background: rgba(255,255,255,0.9); pointer-events: none; transform: translateX(-50%); z-index: 3; box-shadow: 0 0 8px rgba(0,0,0,0.5);"></div>
 
-      <!-- Slider Input 2 -->
-      <input type="range" min="0" max="100" value="50" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; z-index: 4;" 
-             oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+
+## HDRP Lighting & Atmosphere Study (Backrooms)
+
+!!! danger no-icon ":material-lamp-outline: Real-Time Ray Tracing & Volumetric Lighting Progression"
+
+    To further master the High Definition Render Pipeline (HDRP), I undertook a lighting and environment project by recreating a scene from the "Backrooms." This project allowed me to explore advanced features such as real-time ray tracing, volumetric lighting, and performance optimization. While the scene focused primarily on lighting and atmosphere rather than final set details (like decals or debris), it successfully captured the unsettling, sterile aesthetic of the original concept. Switch between the three stages below to inspect the lighting progression:
+
+    <div class="stage-viewer" data-active="3">
+      <img src="../img/portfolio/Project.png" data-stage="1" alt="Stage 1: Greybox Blockout">
+      <img src="../img/portfolio/Project2.png" data-stage="2" alt="Stage 2: Materials & Base Lighting">
+      <img src="../img/portfolio/Project3.png" data-stage="3" alt="Stage 3: Final HDRP & Ray Tracing">
     </div>
-  </div>
 
-</div>
-
-
-
-
-
+    <div class="stage-controls">
+      <button type="button" class="stage-btn" onclick="const w = this.closest('.admonition'); w.querySelector('.stage-viewer').dataset.active = '1'; w.querySelectorAll('.stage-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">1. Greybox Blockout</button>
+      <button type="button" class="stage-btn" onclick="const w = this.closest('.admonition'); w.querySelector('.stage-viewer').dataset.active = '2'; w.querySelectorAll('.stage-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">2. Base Lighting</button>
+      <button type="button" class="stage-btn active" onclick="const w = this.closest('.admonition'); w.querySelector('.stage-viewer').dataset.active = '3'; w.querySelectorAll('.stage-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">3. Final HDRP</button>
+    </div>
 
 
 
+## Content Creation & 3D Thumbnail Design
 
+!!! danger no-icon ":material-broadcast: Multi-Platform Streaming & Custom Blender Branding"
 
+    In 2024, I expanded into streaming on Twitch and TikTok. Managing multiple platforms meant balancing content creation, video editing, and community moderation—all while staying hands-on with my branding. I designed and rendered my own thumbnails in Blender, using custom props to ensure a unique visual style.
 
+    === ":material-cube-outline: Blender Viewport Setup"
 
+        <div class="media-wrapper">
+          <a href="../img/portfolio/Saga_Blend.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
+            <img src="../img/portfolio/Saga_Blend.png" alt="Blender 3D Character & Prop Setup" style="object-fit: cover;">
+          </a>
+        </div>
 
+    === ":material-image-check-outline: Final Rendered Thumbnail"
 
+        <div class="media-wrapper">
+          <a href="../img/portfolio/Saga_Final.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
+            <img src="../img/portfolio/Saga_Final.png" alt="Final YouTube Thumbnail Design" style="object-fit: cover;">
+          </a>
+        </div>
 
+    === ":material-youtube: Featured Video"
 
+        <div class="media-wrapper">
+          <iframe src="https://youtube.com" allowfullscreen></iframe>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-<video width="640" height="360" controls>
-  <source src="assets/videos/IK_Preview.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<video width="640" height="360" controls>
-  <source src="assets/videos/IK_AI.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
- [Source code](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/inversekinematics)
-
-- My approach to this system was significantly influenced by this specific demonstration, which guided my development of the ray-scanning logic:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PryJ3CpHcXQ?si=KaBuUx3wL3ZQ3H1T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<br/><br/>
-
-- To further master the High Definition Render Pipeline (HDRP), I undertook a lighting and environment project by recreating a scene from the "Backrooms." This project allowed me to explore advanced features such as real-time ray tracing, volumetric lighting and performance optimization.
-While the scene focused primarily on lighting and atmosphere rather than final set details (like decals or debris), it successfully captured the unsettling, sterile aesthetic of the original concept. You can see the progress of the study and the final atmosphere below:
-
-![BILD](/assets/pictures/Project.png)
-![BILD](/assets/pictures/Project2.png)
-![BILD](/assets/pictures/Project3.png)
-
-- In 2024, I expanded into streaming on Twitch and TikTok. Managing multiple platforms meant balancing content creation, video editing and community moderation all while staying hands on with my branding. I designed and rendered my own thumbnails in Blender, using custom props to ensure a unique visual style. You can see the full collection of my work over on my YouTube channel:
-
-![BILD](/assets/pictures/Saga_Blend.png)
-![BILD](/assets/pictures/Saga_Final.png)
-
-[Link to the Video](https://youtu.be/xs0xGIgUxPI?si=4JPWe7Q1zgxhvWn-)
-
-<br/><br/>
-<br/><br/>
+    <div class="status-row">
+      <span>:material-youtube: <a href="https://youtube.com" target="_blank">YouTube</a></span>
+      <span>•</span>
+      <span>:material-twitch: <a href="https://twitch.tv" target="_blank">Twitch</a></span>
+      <span>•</span>
+      <span>:material-music-note: <a href="https://tiktok.com" target="_blank">TikTok</a></span>
+    </div>
