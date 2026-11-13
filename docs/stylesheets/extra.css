@@ -187,7 +187,7 @@
 
 .md-typeset .admonition.no-icon>.admonition-title,
 .md-typeset .admonition.no-icon>summary {
-  padding-left: 0.75rem;
+  padding-left: 0.0rem;
 }
 
 .md-typeset .grid.cards>ul>li {

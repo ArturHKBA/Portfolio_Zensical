@@ -37,15 +37,15 @@ icon: unity
     While my journey into game development began in 2014, it was in 2016 that I transitioned into the Unity Engine to bring my concepts to life. During this period, I developed an independent horror project, which served as a foundation for mastering C# scripting, simple enemy AI systems and interactive environment design. The following previews showcase my early work and reflect the beginning of my passion for the creative freedom found in game development, turning complex ideas into playable experiences.
 
 
-## Simple AI & Pathfinding
+!!! danger no-icon ""
 
-!!! danger no-icon ":material-robot-outline: Enemy AI & NavMesh System"
+    ## :material-robot-outline: **Simple AI & Pathfinding**
 
-    Implemented simple enemy AI utilizing Unity’s NavMesh system and custom waypoint scripting to create dynamic patrol and chase behaviors.
+    *Implemented simple enemy AI utilizing Unity’s NavMesh system and custom waypoint scripting to create dynamic patrol and chase behaviors.*
 
-    === ":material-map-marker-path: Enemy Waypoints"
+    === ":material-map-marker-path: *Enemy Waypoints*"
 
-        Demonstrating the dynamic patrol routine between the custom waypoint scripts.
+        *Demonstrating the dynamic patrol routine between the custom waypoint scripts.*
 
         <div class="media-wrapper">
           <video controls>
@@ -53,9 +53,9 @@ icon: unity
           </video>
         </div>
 
-    === ":material-vector-polygon: NavMesh Preview"
+    === ":material-vector-polygon: *NavMesh Preview*"
 
-        Visualizing the underlying Unity NavMesh calculation and pathfinding system in action.
+        *Visualizing the underlying Unity NavMesh calculation and pathfinding system in action.*
 
         <div class="media-wrapper">
           <video controls>
@@ -63,7 +63,9 @@ icon: unity
           </video>
         </div>
 
-    ??? example ":material-code-braces: View Script Snippet (`SimpleAiPatrol.cs`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/simpleai)"
+
+
+    ??? example ":material-code-braces: View Code Snippet (`SimpleAiPatrol.cs`) | :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io/tree/main/assets/resources/unity/simpleai)"
 
         ```csharp title="SimpleAiPatrol.cs" linenums="7"
         public class SimpleAiPatrol : MonoBehaviour
@@ -151,15 +153,17 @@ icon: unity
         }
         ```
 
-## Procedural VFX (Particle Systems)
+<br/><br/>
 
-!!! danger no-icon ":material-shimmer: Particle Systems & Procedural Effects"
+!!! danger no-icon ""
 
-    Exploration of collision-based particle logic and scripted asset behaviors for dynamic in-game visual feedback.
+    ## :material-shimmer: **Procedural VFX (Particle Systems)**
 
-    === ":material-water: Dynamic Blood-Splatter"
+    *Exploration of collision-based particle logic and scripted asset behaviors for dynamic in-game visual feedback.*
 
-        By utilizing collision detection within the Particle System, I ensured that every impact resulted in a unique visual output, avoiding repetitive "canned" animations.
+    === ":material-water: *Dynamic Blood-Splatter*"
+
+        *By utilizing collision detection within the Particle System, I ensured that every impact resulted in a unique visual output, avoiding repetitive "canned" animations.*
 
         <div class="media-wrapper">
           <video controls>
@@ -167,59 +171,48 @@ icon: unity
           </video>
         </div>
 
-    === ":material-script-text-play: Asset Scripting"
+    === ":material-script-text-play: *Asset Scripting*"
 
-        Another scripted example using some assets to expand the procedural visual effect variety.
-
-        <div class="media-wrapper">
-          <iframe src="https://youtube.com" allowfullscreen></iframe>
-        </div>
-
-        <br>
-
-        **Gore Visuals & Particle Sheet:** High-resolution overview and inspectable detail showcase of the compiled custom gore particle sheet.
-
-        <div class="media-wrapper spoiler-card" onclick="this.classList.add('revealed'); this.querySelector('a').click();">
-          <a href="../img/portfolio/Gore.png" class="glightbox" style="display: block; width: 100%; height: 100%;" onclick="event.stopPropagation();">
-            <img src="../img/portfolio/Gore.png" alt="Gore Preview">
-          </a>
-          <div class="spoiler-overlay">
-            <span class="spoiler-title">:material-alert-outline: SPOILER: GORE CONTENT</span>
-            <span class="spoiler-desc">This preview contains potentially disturbing scenes or explicit gore depictions. Click here to reveal and inspect the full image.</span>
+        <div class="media-split-grid">
+        <div class="media-split-item">
+          <p><em>Another scripted example using some assets to expand the procedural visual effect variety.</em></p>
+          <div class="media-wrapper">
+            <iframe src="https://youtube.com" allowfullscreen></iframe>
           </div>
         </div>
+        <div class="media-split-item">
+          <p><em>Gore Visuals &amp; Particle Sheet:</em> High-resolution overview and inspectable detail showcase of the compiled custom gore particle sheet.</p>
+          <div class="media-wrapper spoiler-card" onclick="this.classList.add('revealed'); this.querySelector('a').click();">
+            <a href="../img/portfolio/Gore.png" class="glightbox" style="display: block; width: 100%; height: 100%;" onclick="event.stopPropagation();">
+              <img src="../img/portfolio/Gore.png" alt="Gore Preview">
+            </a>
+            <div class="spoiler-overlay">
+              <span class="spoiler-title">:material-alert-outline: <strong>SPOILER: GORE CONTENT!</strong></span>
+              <span class="spoiler-desc"><strong>This preview contains potentially disturbing scenes or explicit gore depictions. Click here to reveal and inspect the full image!</strong></span>
+            </div>
+          </div>
+        </div>
+        </div>
 
+<br/><br/>
 
+!!! danger no-icon ""
 
-## First-Person Animation
+    ## :material-heart-pulse: **Immersive Gameplay Mechanics (Player States)**
 
-!!! danger no-icon ":material-hand-back-right-outline: Fluid Viewmodel & Reload Mechanics"
+    *Combining reactive player states with atmospheric level design to heighten tension through mechanical and visual feedback.*
 
-    I crafted a variety of animations, with a heavy focus on first-person movements. My goal was to move away from robotic motions and create a feel that’s fluid and immersive for the player.
+    === ":material-waveform: *Shock System*"
 
-    <div class="media-wrapper">
-      <video controls>
-        <source src="../vid/Reload.mp4" type="video/mp4">
-      </video>
-    </div>
-
-## Immersive Gameplay Mechanics (Player States)
-
-!!! danger no-icon ":material-heart-pulse: Psychological Horror & Environmental Triggers"
-
-    Combining reactive player states with atmospheric level design to heighten tension through mechanical and visual feedback.
-
-    === ":material-waveform: Shock System"
-
-        I implemented a "Shock System" where entering specific trigger zones changes the player’s physical state (heavy breathing audio and increased camera/aim sway), enhancing psychological horror through mechanical feedback.
+        *I implemented a "Shock System" where entering specific trigger zones changes the player’s physical state (heavy breathing audio and increased camera/aim sway), enhancing psychological horror through mechanical feedback.*
 
         <div class="media-wrapper">
           <iframe src="https://www.youtube.com/embed/D7W4wC5KI78?si=8_Omy2p7tQU7ztnp" allowfullscreen></iframe>
         </div>
 
-    === ":material-image-filter-hdr: Atmospheric Environment"
+    === ":material-image-filter-hdr: *Atmospheric Environment*"
 
-        Overview of the atmospheric scene design and lighting setup used to construct the trigger zones for the player states.
+        *Overview of the atmospheric scene design and lighting setup used to construct the trigger zones for the player states.*
 
         <div class="media-wrapper">
           <a href="../img/portfolio/Scene.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
@@ -227,53 +220,66 @@ icon: unity
           </a>
         </div>
 
+    === ":material-hand-back-right-outline: *First-Person Animation*"
 
+        *I crafted a variety of animations, with a heavy focus on first-person movements. My goal was to move away from robotic motions and create a feel that’s fluid and immersive for the player.*
 
+        <div class="media-wrapper">
+          <video controls>
+            <source src="../vid/Reload.mp4" type="video/mp4">
+          </video>
+        </div>
 
-## Technical Optimization (Graphics Menu)
+<br/><br/>
 
-!!! danger no-icon ":material-tune-variant: Scalable Graphics & Performance Settings"
+!!! danger no-icon ""
 
-    Performance optimization is very important, which is why I also worked on a comprehensive settings menu allowing users to toggle graphic settings like Anti-aliasing, Texture quality, Shadow resolution, Shadow distance, Resolution, V-Sync, Anisotropic Filtering and more. This ensured scalability across both high-end and low-end hardware.
+    ## :material-cog-outline: **Technical Optimization & Usability**
 
-    <div class="compare-slider">
-      <img src="../img/portfolio/Graphics_setting_high.png" alt="Very High Graphics">
-      <div class="compare-overlay">
-        <img src="../img/portfolio/Graphics_setting_low.png" alt="Very Low Graphics">
-      </div>
-      <div class="compare-line"></div>
-      <input type="range" min="0" max="100" value="50" oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
-    </div>
+    *Focusing on scalable performance and accessible controls to ensure a smooth, responsive experience across different hardware setups and input devices.*
 
-    ??? example no-icon ":material-code-braces: View Script Snippet (`FPSCount.cs`) :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io)"
+    === ":material-tune-variant: *Graphics & Performance*"
 
-        ```csharp title="FPSCount.cs" linenums="41"
-        private void OnApplicationQuit()
-        {
-            if (totalUpdates > 1)
+        *Performance optimization is very important, which is why I also worked on a comprehensive settings menu allowing users to toggle graphic settings like Anti-aliasing, Texture quality, Shadow resolution, Shadow distance, Resolution, V-Sync, Anisotropic Filtering and more. This ensured scalability across both high-end and low-end hardware.*
+
+        <div class="compare-slider">
+          <img src="../img/portfolio/Graphics_setting_high.png" alt="Very High Graphics">
+          <div class="compare-overlay">
+            <img src="../img/portfolio/Graphics_setting_low.png" alt="Very Low Graphics">
+          </div>
+          <div class="compare-line"></div>
+          <input type="range" min="0" max="100" value="50" oninput="this.parentElement.style.setProperty('--slider-pos', this.value + '%');">
+        </div>
+
+        ??? example ":material-code-braces: View Code Snippet (`FPSCount.cs`) | :material-github: [Full Source Code on GitHub](https://github.com/ArturHKBA/ArturHKBA.github.io)"
+
+            ```csharp title="FPSCount.cs" linenums="41"
+            private void OnApplicationQuit()
             {
-                int final = totalFps / (totalUpdates - 1);
-                Debug.Log("Deine FPS: " + final);
+                if (totalUpdates > 1)
+                {
+                    int final = totalFps / (totalUpdates - 1);
+                    Debug.Log("Deine FPS: " + final);
+                }
             }
-        }
-        ```
+            ```
 
-## Cross-Platform Input Support
+    === ":material-controller-classic-outline: *Cross-Platform Input Support*"
 
-!!! danger no-icon ":material-controller-classic-outline: Unified Gamepad & Controller Prompts"
+        *I built a flexible input system with full support for Xbox and DualShock controllers. My goal was to make sure playing on a PC feels just as smooth and responsive as playing on a console.*
 
-    I built a flexible input system with full support for Xbox and DualShock controllers. My goal was to make sure playing on a PC feels just as smooth and responsive as playing on a console.
+        <div class="media-wrapper">
+          <a href="../img/portfolio/Gamepad.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
+            <img src="../img/portfolio/Gamepad.png" alt="Cross-Platform Input Showcase" style="object-fit: cover;">
+          </a>
+        </div>
 
-    <div class="media-wrapper">
-      <a href="../img/portfolio/Gamepad.png" class="glightbox" style="display: block; width: 100%; height: 100%;">
-        <img src="../img/portfolio/Gamepad.png" alt="Cross-Platform Input Showcase" style="object-fit: cover;">
-      </a>
-    </div>
+        <div class="status-row">
+          <span>:material-source-branch: Source Code:</span>
+          <span class="status-badge">COMING SOON</span>
+        </div>
 
-    <div class="status-row">
-      <span>:material-source-branch: Source Code:</span>
-      <span class="status-badge">COMING SOON</span>
-    </div>
+<br/><br/>
 
 !!! warning "Note"
     
